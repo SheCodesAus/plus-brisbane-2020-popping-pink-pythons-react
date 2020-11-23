@@ -6,10 +6,6 @@
     flex-wrap: wrap;
   }
   
-  /* Link {
-    padding: 0.5em;
-  } */
-  
   a:link {
     text-decoration: none;
 }
@@ -24,21 +20,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.7vw;
-    margin-bottom: 5px;
+    padding: 1.5em;
     color: #5A3B5D;
-    font-size: 1.05em;
-    /* border: 2px solid orange; */
+    font-size: 2em;
+    font-weight: 500;
+    border-radius: 5%;
 }
 
 .nav-link:hover {
     color: #FEDC2A;
-    background-color: rgba(0,0,0, .3);
+    font-weight: 400;
+    background-color: rgba(139,83,143, .95);
+    /* background-color: rgba(90,59,93, .9); */
 }
-
-  /* Link {
-    padding: 0.5em;
-  } */
 
 
   @media screen and (max-width: 700px) {
