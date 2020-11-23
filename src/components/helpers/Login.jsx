@@ -42,9 +42,7 @@ function LoginControl () {
 
 function LoginButton(props) {
     return (
-        <a
-        // className="button-control"
-        onClick={props.onClick}>
+        <a onClick={props.onClick}>
             Login
         </a>
     );
@@ -52,9 +50,7 @@ function LoginButton(props) {
   
 function LogoutButton(props) {
     return (
-        <a
-        // className="button-control"
-        onClick={props.onClick}>
+        <a onClick={props.onClick}>
             Logout
         </a>
     );

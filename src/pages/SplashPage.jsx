@@ -1,8 +1,9 @@
 import React from 'react';
 import '../App.css';
+import Splash from '../components/images/splash-background.png';
 
 function SplashPage() {
-    return <img className="" src={require('../images/splash-background.png')} />;
+    return <img className="" src={Splash} alt="splash" />;
 }
 
-export default SplashPage; sure
+export default SplashPage; 
