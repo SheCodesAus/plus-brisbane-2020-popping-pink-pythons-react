@@ -4,7 +4,6 @@ import Nav from "./components/nav/Nav";
 import SplashPage from './pages/SplashPage';
 import './App.css';
 
-
 function App() {
 
   return (
@@ -23,6 +22,7 @@ function App() {
         
         </Switch>
       </div>
+
 
     </Router>
   );
