@@ -1,14 +1,14 @@
 import React, { useEffect, useState }  from "react"
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom"
-import LoginControl from "../Helpers/Login"
+import LoginControl from "../helpers/Login"
 import "./Nav.css"
 
 function Nav() {
     //variables
     const location = useLocation()
     const [isLoggedIn, setIsLoggedIn] = useState(false)
-    const [profile, setProfile] = useState("/")
+    // const [profile, setProfile] = useState("/")
 
     useEffect(() => {
         let username = window.localStorage.getItem("username")
