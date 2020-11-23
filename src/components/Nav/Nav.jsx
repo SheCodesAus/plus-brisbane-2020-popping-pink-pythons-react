@@ -8,7 +8,7 @@ function Nav() {
     //variables
     const location = useLocation()
     const [isLoggedIn, setIsLoggedIn] = useState(false)
-    // const [profile, setProfile] = useState("/")
+    const [profile, setProfile] = useState("/")
 
     useEffect(() => {
         let username = window.localStorage.getItem("username")
@@ -26,10 +26,10 @@ function Nav() {
         return (
             <nav id="nav-bar">
                 <div className="nav">
-                        {!isLoggedIn && <Link to="/register/"><div className="nav-link">Register</div></Link>}
-                        {isLoggedIn && <Link to="/opportunity/"><div className="nav-link">Opportunities</div></Link>}
-                        {/* {isLoggedIn && <Link to="//"><div className="nav-link">Create A Project</div></Link>} */}
-                        {/* {isLoggedIn && <Link to={profile}><div className="nav-link">Profile</div></Link>} */}
+                        {!isLoggedIn && <Link to="/opportunity"><div className="nav-link">Opportunities</div></Link>}
+                        {!isLoggedIn && <Link to="/register"><div className="nav-link">Sign up!</div></Link>}
+                        {isLoggedIn && <Link to="/newopportunity/"><div className="nav-link">Create an Opportunity</div></Link>}
+                        {isLoggedIn && <Link to={profile}><div className="nav-link">My Profile</div></Link>}
                         <div className="nav-link"><LoginControl /></div>
                 </div>
             </nav>
