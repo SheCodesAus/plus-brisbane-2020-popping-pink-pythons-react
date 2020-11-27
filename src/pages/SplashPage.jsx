@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import SplashImage from '../components/SplashImage/SplashImage';
+import SplashImage from '../components/helpers/SplashImage';
 
 function SplashPage() {
     return (

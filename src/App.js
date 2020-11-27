@@ -5,6 +5,7 @@ import Navbar from "./components/Header/Navbar";
 import LoginPage from "./pages/LoginPage";
 import SplashPage from './pages/SplashPage';
 import FeedPage from './pages/FeedPage';
+import RegisterPage from './pages/RegisterPage';
 import './App.css';
 
 function App() {
@@ -24,12 +25,16 @@ function App() {
         <div>
         <Switch>
 
-        {/* <Route path="/opportunity">
+        <Route path="/opportunity">
             <FeedPage />
-        </Route> */}
+        </Route>
 
         <Route path="/login">
             <LoginPage />
+        </Route>
+          
+        <Route path="/register">
+            <RegisterPage />
         </Route>
 
         <Route path='/'>
