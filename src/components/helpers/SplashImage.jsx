@@ -5,7 +5,6 @@ function SplashImage() {
     return (
         <div>
             <img src={image} alt="image" />
-            <p>Test</p>
         </div>
     )
 }
