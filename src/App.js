@@ -43,7 +43,6 @@ function App() {
           <Route path="/">
             <SplashPage />
           </Route>
-        </Route>
 
         <Route path="/register">
             <RegisterPage />
