@@ -1,11 +1,8 @@
-import React from 'react';
-// import LoginForm from "../components/LoginForm/LoginForm";
+import React from "react";
+import RegisterUserForm from "../components/RegisterUser/RegisterUserForm";
 
-function RegisterPage() {
-    return( 
-    <h1>This is a Register Page</h1>
-    // <LoginForm />;
-    )
+function RegisterUserPage() {
+  return <RegisterUserForm />;
 }
 
-export default RegisterPage;
+export default RegisterUserPage;

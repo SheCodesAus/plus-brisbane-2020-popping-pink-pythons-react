@@ -1,39 +1,50 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
 import Header from "./components/Header/Header";
 import LoginPage from "./pages/LoginPage";
-import SplashPage from './pages/SplashPage';
-import FeedPage from './pages/FeedPage';
-import UserPage from './pages/UserPage';
-import RegisterPage from './pages/RegisterPage';
-import './App.css';
+import SplashPage from "./pages/SplashPage";
+import FeedPage from "./pages/FeedPage";
+import "./App.css";
+import RegisterUserPage from "./pages/RegisterPage";
+import NewOpportunityPage from "./pages/NewOpportunityPage";
 
 function App() {
-
   return (
-    
     <Router>
+      <div id="header">
+        <Header />
+      </div>
 
-        <div>
-            <Header />
-        </div>
+      <div id="header-nav">
+        <Nav />
+      </div>
 
-        <div id="header-nav">
-            <Nav />
-        </div>
-
-        <div>
+      <div>
         <Switch>
 
         <Route path="/opportunity">
             <FeedPage />
         </Route>
 
-        <Route path="/login">
+          <Route path="/register">
+            <RegisterUserPage />
+          </Route>
+
+          <Route path="/login">
             <LoginPage />
+          </Route>
+
+          <Route path="/NewOpportunity">
+            <NewOpportunityPage />
+          </Route>
+
+          <Route path="/">
+            <SplashPage />
+          </Route>
         </Route>
-          
+
         <Route path="/register">
             <RegisterPage />
         </Route>
@@ -44,14 +55,12 @@ function App() {
 
         <Route path='/'>
           <SplashPage />
-        </Route>    
-        
+        </Route>
+
 
 
         </Switch>
       </div>
-
-
     </Router>
   );
 }
