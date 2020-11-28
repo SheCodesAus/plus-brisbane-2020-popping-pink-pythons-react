@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Nav from "./components/Nav/Nav";
-import Navbar from "./components/Header/Navbar";
+import Header from "./components/Header/Header";
 import LoginPage from "./pages/LoginPage";
 import SplashPage from './pages/SplashPage';
 import FeedPage from './pages/FeedPage';
 import UserPage from './pages/UserPage';
+import RegisterPage from './pages/RegisterPage';
 import './App.css';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
     <Router>
 
         <div>
-            <Navbar />
+            <Header />
         </div>
 
         <div id="header-nav">
@@ -25,12 +26,16 @@ function App() {
         <div>
         <Switch>
 
-        {/* <Route path="/opportunity">
+        <Route path="/opportunity">
             <FeedPage />
-        </Route> */}
+        </Route>
 
         <Route path="/login">
             <LoginPage />
+        </Route>
+          
+        <Route path="/register">
+            <RegisterPage />
         </Route>
 
         <Route path="/users/:id">
