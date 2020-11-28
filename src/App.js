@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import LoginPage from "./pages/LoginPage";
 import SplashPage from './pages/SplashPage';
 import FeedPage from './pages/FeedPage';
+import UserPage from './pages/UserPage';
 import RegisterPage from './pages/RegisterPage';
 import './App.css';
 
@@ -37,10 +38,16 @@ function App() {
             <RegisterPage />
         </Route>
 
+        <Route path="/users/:id">
+            <UserPage />
+        </Route>
+
         <Route path='/'>
           <SplashPage />
         </Route>    
         
+
+
         </Switch>
       </div>
 
