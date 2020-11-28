@@ -2,7 +2,8 @@ import React from "react";
 import RegisterUserForm from "../components/RegisterUser/RegisterUserForm";
 
 function RegisterUserPage() {
-  return <RegisterUserForm />;
+  return 
+  <RegisterUserForm />;
 }
 
 export default RegisterUserPage;
