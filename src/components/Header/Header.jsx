@@ -1,7 +1,6 @@
 import Navbar from "../helpers/Navbar";
 import "./Header.css";
 
-
 function Header(){
 
     return(
