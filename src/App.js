@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
-import Header from "./components/Header/Header";
 import LoginPage from "./pages/LoginPage";
 import SplashPage from "./pages/SplashPage";
 import FeedPage from "./pages/FeedPage";
@@ -23,10 +22,9 @@ function App() {
 
       <div>
         <Switch>
-
-        <Route path="/opportunity">
+          <Route path="/opportunity">
             <FeedPage />
-        </Route>
+          </Route>
 
           <Route path="/register">
             <RegisterUserPage />
@@ -43,22 +41,10 @@ function App() {
           <Route path="/">
             <SplashPage />
           </Route>
-        </Route>
 
-        <Route path="/register">
-            <RegisterPage />
-        </Route>
-
-        <Route path="/users/:id">
-            <UserPage />
-        </Route>
-
-        <Route path='/'>
-          <SplashPage />
-        </Route>
-
-
-
+          <Route path="/">
+            <SplashPage />
+          </Route>
         </Switch>
       </div>
     </Router>
