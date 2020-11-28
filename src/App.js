@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Nav from "./components/Nav/Nav";
-import Navbar from "./components/Header/Navbar";
+import Header from "./components/Header/Header";
 import LoginPage from "./pages/LoginPage";
 import SplashPage from './pages/SplashPage';
 import FeedPage from './pages/FeedPage';
@@ -15,7 +15,7 @@ function App() {
     <Router>
 
         <div>
-            <Navbar />
+            <Header />
         </div>
 
         <div id="header-nav">
