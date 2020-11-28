@@ -5,9 +5,10 @@ import Nav from "./components/Nav/Nav";
 import LoginPage from "./pages/LoginPage";
 import SplashPage from "./pages/SplashPage";
 import FeedPage from "./pages/FeedPage";
-import "./App.css";
 import RegisterUserPage from "./pages/RegisterPage";
 import NewOpportunityPage from "./pages/NewOpportunityPage";
+import "./App.css";
+
 
 function App() {
   return (
@@ -41,14 +42,6 @@ function App() {
           <Route path="/">
             <SplashPage />
           </Route>
-
-        <Route path="/register">
-            <RegisterPage />
-        </Route>
-
-        <Route path="/users/:id">
-            <UserPage />
-        </Route>
 
         <Route path='/'>
           <SplashPage />

@@ -53,23 +53,24 @@ function RegisterUserForm() {
 
   return (
     <form>
-      <div>
+      <div className="form-wrap">
+      <div className='form-group'>
         <label htmlFor="username">User Name</label>
         <input type="text" id="username" onChange={handleUserChange} />
       </div>
-      <div>
+      <div className='form-group'>
         <label htmlFor="email">Email</label>
         <input type="text" id="email" onChange={handleUserChange} />
       </div>
-      <div>
+      <div className='form-group'>
         <label htmlFor="password">Password</label>
         <input type="text" id="Password" onChange={handleUserChange} />
       </div>
-      <div>
+      <div className='form-group'>
         <label htmlFor="name">Name</label>
         <input type="text" id="Name" onChange={handleUserChange} />
       </div>
-      <div>
+      <div className='form-group'>
         <label htmlFor="owner">is Opportunity Owner?</label>
         <input
           type="checkbox"
@@ -77,7 +78,8 @@ function RegisterUserForm() {
           id="owner"
           onChange={handleUserChange}
         />
-      </div>
+        </div>
+        </div>
 
       <button type="submit" onClick={handleUserSubmit}>
         Register
