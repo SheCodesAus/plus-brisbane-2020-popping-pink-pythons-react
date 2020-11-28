@@ -7,6 +7,7 @@ import SplashPage from "./pages/SplashPage";
 import FeedPage from "./pages/FeedPage";
 import "./App.css";
 import RegisterUserPage from "./pages/RegisterPage";
+import NewOpportunityPage from "./pages/NewOpportunityPage";
 
 function App() {
   return (
@@ -31,6 +32,10 @@ function App() {
 
           <Route path="/login">
             <LoginPage />
+          </Route>
+
+          <Route path="/NewOpportunity">
+            <NewOpportunityPage />
           </Route>
 
           <Route path="/">

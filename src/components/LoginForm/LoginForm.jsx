@@ -52,7 +52,7 @@ function LoginForm() {
   };
 
   return (
-    <div>
+    <div className="LoginForm">
       <form>
         <div>
           <h2>You are welcome!</h2>
@@ -81,14 +81,14 @@ function LoginForm() {
           </div>
         </div>
 
-        <div className="loggin-button">
+        <div>
           <button onClick={handleCancel}>Cancel</button>
           <button type="submit" onClick={handleSubmit}>
             Login
           </button>
         </div>
 
-        <div className="redirect-link">
+        <div>
           <Link to={`/register`}>Sign Up</Link>
         </div>
       </form>

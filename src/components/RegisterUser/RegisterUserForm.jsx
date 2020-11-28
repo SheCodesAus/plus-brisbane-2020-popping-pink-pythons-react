@@ -21,6 +21,7 @@ function RegisterUserForm() {
       ...prevUserData,
       [id]: value,
     }));
+    console.log(value);
   };
 
   const postUserData = async () => {
@@ -70,11 +71,16 @@ function RegisterUserForm() {
       </div>
       <div>
         <label htmlFor="owner">is Opportunity Owner?</label>
-        <input type={Boolean} id="owner" onChange={handleUserChange} />
+        <input
+          type="checkbox"
+          value="True"
+          id="owner"
+          onChange={handleUserChange}
+        />
       </div>
 
       <button type="submit" onClick={handleUserSubmit}>
-        Submit
+        Register
       </button>
     </form>
   );
