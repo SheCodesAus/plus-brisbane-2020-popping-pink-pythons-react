@@ -42,19 +42,9 @@ function App() {
             <SplashPage />
           </Route>
 
-        <Route path="/register">
-            <RegisterPage />
-        </Route>
-
-        <Route path="/users/:id">
-            <UserPage />
-        </Route>
-
-        <Route path='/'>
-          <SplashPage />
-        </Route>
-
-
+          <Route path="/">
+            <SplashPage />
+          </Route>
 
           <Route path="/">
             <SplashPage />
