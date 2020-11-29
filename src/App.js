@@ -16,7 +16,7 @@ function App() {
           <FeedPage />
         </Route>
 
-        <Route path="/opportunity/:id">
+        <Route path="/opportunity/${id}">
           <OpportunityPage />
         </Route>
 
