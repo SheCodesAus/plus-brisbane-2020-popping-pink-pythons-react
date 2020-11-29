@@ -18,16 +18,17 @@ function OpportunityPage() {
 
     return (
         <div>
-    <div id="header">
-        <Header />
-    </div>
-    <div>
-        <h2>{ opportunityData .title}</h2>
-        <h3>Created at: { opportunityData .date_created}</h3>
-        <h3> {` Status: $ { opportunityData .is_open} `} </h3>
-        <h3>Opportunity Objectives:</h3>
+            <div id="header">
+                <Header />
             </div>
+            
+            <div>
+                <h2>{ opportunityData .title}</h2>
+                <h3>Created at: { opportunityData .date_created}</h3>
+                <h3> {` Status: $ { opportunityData .is_open} `} </h3>
+                <h3>Opportunity Objectives:</h3>
             </div>
+        </div>
     );
 }
 export default OpportunityPage;
