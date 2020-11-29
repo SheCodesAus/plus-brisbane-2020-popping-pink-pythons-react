@@ -16,20 +16,16 @@
 }
   
 .nav-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5em;
-    color: #5A3B5D;
-    font-size: 2em;
-    font-weight: 500;
+    padding: 1em;
+    color: white;
+    font-size: 20px;
     border-radius: 5%;
 }
 
 .nav-link:hover {
     color: #FEDC2A;
-    font-weight: 400;
-    background-color: rgba(139,83,143, .95);
+    font-weight: bold;
+    /* background-color: rgba(139,83,143, .95); */
     /* background-color: rgba(90,59,93, .9); */
 }
 
