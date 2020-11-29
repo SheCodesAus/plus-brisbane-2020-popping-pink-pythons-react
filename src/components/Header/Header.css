@@ -1,6 +1,10 @@
-*{
-  border: solid 1px red;
+body{
+  margin-top:0;
+  margin-left:0;
+  margin-right:0;
+  padding: 0;
 }
+
 .header{
   width: 100%;
   min-height: 6vh;
@@ -9,6 +13,7 @@
   align-items: center;
   background-color:black;
   transition: all .7s ease-in;
+  margin:0;
 }
 
 .scrolled{
@@ -20,11 +25,11 @@
 }
 
 .scrolled .logo img {
-  width: 90px;
+  width: 80px;
 }
 
 .logo img{
-  width: 150px;
+  width: 120px;
   margin-left: 10px;
   flex-wrap: wrap;
   align-self: flex-start;
@@ -34,5 +39,6 @@
 .navbar-flex{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   min-width: 100%;
 }

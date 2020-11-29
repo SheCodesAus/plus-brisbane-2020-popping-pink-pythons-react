@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from "./components/Header/Header";
 import LoginPage from "./pages/LoginPage";
 import SplashPage from "./pages/SplashPage";
 import FeedPage from "./pages/FeedPage";
@@ -11,7 +10,7 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <div>
+
         <Switch>
           <Route path="/opportunity">
             <FeedPage />
@@ -33,7 +32,7 @@ function App() {
             <SplashPage />
           </Route>
         </Switch>
-      </div>
+
     </Router>
   );
 }
