@@ -8,11 +8,9 @@ import RegisterUserPage from "./pages/RegisterPage";
 import NewOpportunityPage from "./pages/NewOpportunityPage";
 import "./App.css";
 
-
 function App() {
   return (
     <Router>
-
       <div>
         <Switch>
           <Route path="/opportunity">
@@ -30,14 +28,6 @@ function App() {
           <Route path="/NewOpportunity">
             <NewOpportunityPage />
           </Route>
-
-          <Route path="/">
-            <SplashPage />
-          </Route>
-
-        <Route path='/'>
-          <SplashPage />
-        </Route>
 
           <Route path="/">
             <SplashPage />
