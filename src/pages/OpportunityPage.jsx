@@ -7,7 +7,7 @@ function OpportunityPage() {
     const { id } = useParams();
     
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}/opportunity/${id}`)
+        fetch(`${process.env.REACT_APP_API_URL}opportunity/${id}`)
         .then((results) => {
         return results.json();
         })
