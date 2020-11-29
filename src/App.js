@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Nav from "./components/Nav/Nav";
 import Header from "./components/Header/Header";
 import LoginPage from "./pages/LoginPage";
+import OpportunityPage from "./pages/OpportunityPage";
 import SplashPage from './pages/SplashPage';
 import FeedPage from './pages/FeedPage';
 import RegisterPage from './pages/RegisterPage';
@@ -27,6 +28,10 @@ function App() {
 
         <Route path="/opportunity">
             <FeedPage />
+        </Route>
+
+        <Route path="/opportunity/${id}">
+            <OpportunityPage />
         </Route>
 
         <Route path="/login">
