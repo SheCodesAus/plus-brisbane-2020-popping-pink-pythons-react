@@ -6,6 +6,8 @@ import FeedPage from "./pages/FeedPage";
 import RegisterUserPage from "./pages/RegisterPage";
 import NewOpportunityPage from "./pages/NewOpportunityPage";
 import OpportunityPage from "./pages/OpportunityPage";
+import UserPage from "./pages/UserPage";
+import UserUpdatePage from "./pages/UserUpdatePage";
 import "./App.css";
 
 function App() {
@@ -13,12 +15,12 @@ function App() {
     <Router>
        <div>
         <Switch>
-           <Route path="/opportunity">
-            <FeedPage />
+        <Route path="/opportunity/:id">
+            <OpportunityPage />
           </Route>
 
-          <Route path="/opportunity/:id/">
-            <OpportunityPage />
+          <Route path="/opportunity">
+            <FeedPage />
           </Route>
 
           <Route path="/NewOpportunity">
@@ -31,6 +33,18 @@ function App() {
 
           <Route path="/login">
             <LoginPage />
+          </Route>
+
+          <Route path="/newopportunity">
+            <NewOpportunityPage />
+          </Route>
+
+          <Route exact path="/users/:username">
+            <UserPage />
+          </Route>
+
+          <Route path="/users/:username/edit">
+            <UserUpdatePage />
           </Route>
 
           <Route path="/">
