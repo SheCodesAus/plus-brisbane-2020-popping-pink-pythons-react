@@ -5,15 +5,24 @@ import SplashPage from "./pages/SplashPage";
 import FeedPage from "./pages/FeedPage";
 import RegisterUserPage from "./pages/RegisterPage";
 import NewOpportunityPage from "./pages/NewOpportunityPage";
+import OpportunityPage from "./pages/OpportunityPage";
 import "./App.css";
 
 function App() {
   return (
     <Router>
-
+       <div>
         <Switch>
-          <Route path="/opportunity">
+           <Route path="/opportunity">
             <FeedPage />
+          </Route>
+
+          <Route path="/opportunity/:id/">
+            <OpportunityPage />
+          </Route>
+
+          <Route path="/NewOpportunity">
+            <NewOpportunityPage />
           </Route>
 
           <Route path="/register">
@@ -24,15 +33,12 @@ function App() {
             <LoginPage />
           </Route>
 
-          <Route path="/NewOpportunity">
-            <NewOpportunityPage />
-          </Route>
-
           <Route path="/">
             <SplashPage />
           </Route>
-        </Switch>
-
+          
+          </Switch>
+        </div>
     </Router>
   );
 }

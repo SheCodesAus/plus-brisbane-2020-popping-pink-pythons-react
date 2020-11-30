@@ -1,0 +1,21 @@
+.opportunity-card-sml{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px gray;
+    margin: 5px;
+}
+
+.opportunity-card-sml img{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    object-fit:contain;
+    justify-content: center;
+}
+
+.opportunity-card-sml a{
+    width: 100%;
+}
