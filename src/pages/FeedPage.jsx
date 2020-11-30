@@ -7,10 +7,12 @@ function FeedPage() {
     const [opportunityList, setOpportunityList] = useState([]);
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}/opportunity`).then((results) => {
-            return results.json();
-        }).then((data) => {
-            setOpportunityList(data);
+        fetch(`${process.env.REACT_APP_API_URL}/opportunity`)
+        .then((results) => {
+        return results.json();
+        })
+        .then((data) => {
+        setOpportunityList(data);
         });
     }, []);
     
