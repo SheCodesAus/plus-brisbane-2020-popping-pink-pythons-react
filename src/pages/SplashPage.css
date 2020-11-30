@@ -1,0 +1,32 @@
+.flex-container{
+    padding-top:10px;
+    display:flex;
+    justify-content: center;
+}
+
+.splash-image img{
+    border: 1px solid black;
+    height: 700px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.button-locator{
+    position:absolute;
+    top:65%;
+    left:55%;
+}
+
+.button-locator button{
+    width: 300px;
+    height: 80px;
+    color: white;
+    background-color: #5a3b5d;
+    font-size: 30px;
+    font-family: 'satisfy';
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.336), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (max-width: 700px) {
+
+  }

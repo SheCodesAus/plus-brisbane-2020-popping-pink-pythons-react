@@ -12,7 +12,7 @@ function Nav() {
 
     useEffect(() => {
         let username = window.localStorage.getItem("username")
-        setProfile("/user/" + username + "/")
+        setProfile("/users/" + username + "/")
         if (username) {
             setIsLoggedIn(true)
         } else {
@@ -27,7 +27,7 @@ function Nav() {
             <nav id="nav-bar">
                 <div className="nav">
                         {!isLoggedIn && <Link to="/opportunity"><div className="nav-link">Opportunities</div></Link>}
-                        {!isLoggedIn && <Link to="/register"><div className="nav-link">Sign up!</div></Link>}
+                        {!isLoggedIn && <Link to="/register"><div className="nav-link">Sign up</div></Link>}
                         {isLoggedIn && <Link to="/newopportunity/"><div className="nav-link">Create an Opportunity</div></Link>}
                         {isLoggedIn && <Link to={profile}><div className="nav-link">My Profile</div></Link>}
                         <div className="nav-link"><LoginControl /></div>

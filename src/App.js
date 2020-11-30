@@ -1,54 +1,58 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Nav from "./components/Nav/Nav";
 import LoginPage from "./pages/LoginPage";
 import SplashPage from "./pages/SplashPage";
 import FeedPage from "./pages/FeedPage";
 import RegisterUserPage from "./pages/RegisterPage";
 import NewOpportunityPage from "./pages/NewOpportunityPage";
+import OpportunityPage from "./pages/OpportunityPage";
+import UserPage from "./pages/UserPage";
+import UserUpdatePage from "./pages/UserUpdatePage";
 import "./App.css";
 
 function App() {
   return (
     <Router>
-      <div id="header">
-        <Header />
-      </div>
-
-      <div id="header-nav">
-        <Nav />
-      </div>
-
-      <div>
+       <div>
         <Switch>
+        <Route path="/opportunity/:id">
+            <OpportunityPage />
+          </Route>
 
-        <Route path="/opportunity">
+          <Route path="/opportunity">
             <FeedPage />
-        </Route>
+          </Route>
 
-        <Route path="/register">
-          <RegisterUserPage />
-        </Route>
+          <Route path="/NewOpportunity">
+            <NewOpportunityPage />
+          </Route>
 
-        <Route path="/login">
-          <LoginPage />
-        </Route>
+          <Route path="/register">
+            <RegisterUserPage />
+          </Route>
 
-        <Route path="/NewOpportunity">
-          <NewOpportunityPage />
-        </Route>
+          <Route path="/login">
+            <LoginPage />
+          </Route>
 
-        <Route path="/">
-          <SplashPage />
-        </Route>
+          <Route path="/newopportunity">
+            <NewOpportunityPage />
+          </Route>
 
-        <Route path='/'>
-          <SplashPage />
-        </Route>
+          <Route path="/users/:username">
+            <UserPage />
+          </Route>
 
-        </Switch>
-      </div>
+          <Route path="/users/:username/edit">
+            <UserUpdatePage />
+          </Route>
+
+          <Route path="/">
+            <SplashPage />
+          </Route>
+          
+          </Switch>
+        </div>
     </Router>
   );
 }
