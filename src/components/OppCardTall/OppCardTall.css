@@ -1,20 +1,23 @@
-.button-default {
+.opportunity-card-tall{
+    display: flex;
     background-color: white;
     flex-wrap: wrap;
-    align-content: space-around;
     width: 100%;
-    height: 100%;
     border: 1px solid black;
     box-shadow: 0px 0px 5px gray;
     margin: 5px;
-    text-align: left;
+    padding: 20px;
 }
 
-.button-default img{
+.opportunity-card-tall img{
     display: flex;
-    align-self: center;
+    align-items: center;
     width: 100%;
-    height: auto;
+    height: 300px;
     object-fit:contain;
+    justify-content: center;
 }
 
+.opportunity-card-tall a{
+    width: 100%;
+}

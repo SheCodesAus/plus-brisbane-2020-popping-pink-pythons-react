@@ -1,10 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Satisfy&display=swap');
 
+.feed-page{
+    display: flex;
+}
+
+.header-container{
+    display: grid;
+    grid-template-columns: 77% 20%;
+}
+
+.header-container h2{
+    font-family: 'satisfy';
+    font-size: 30px;
+    padding: 0;
+    color: ;
+}
 
 #opportunity-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    max-width: 75%;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(auto,400px);
     column-gap: 10px;
     row-gap: 10px;
-    padding: 10px;
+    padding-right:20px;
   }
+
+#latest-updates-list{
+    max-width: 20%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(auto,400px);
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+
+#latest-updates-list .button-default {
+    background-color: white;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px gray;
+    margin: 5px;
+    text-align: left;
+}
+
+.button-default img{
+    display: flex;
+    align-self: center;
+    width: 100%;
+    height: 300px;
+    object-fit:contain;
+    justify-content: center;
+}
+
+.modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+z-index: 1040;
+width: 100vw;
+height: 100vh;
+background-color: #000;
+opacity: .5;
+}
+
+.modal-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+z-index: 1050;
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+overflow-y: auto;
+outline: 0;
+}
+
+.modal {
+z-index: 100;
+position: relative;
+margin: 1.75rem auto;
+border-radius: 3px;
+max-width: 500px;
+padding: 2rem;
+}
+
+.modal-header {
+width: 110%;
+display: flex;
+justify-content: flex-end;
+}
+
+.modal-close-button {
+font-size: 1.4rem;
+font-weight: 700;
+line-height: 1;
+color: #000;
+opacity: .3;
+cursor: pointer;
+border: none;
+}
