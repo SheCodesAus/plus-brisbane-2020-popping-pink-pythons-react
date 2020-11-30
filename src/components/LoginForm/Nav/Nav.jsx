@@ -12,7 +12,7 @@ function Nav() {
 
     useEffect(() => {
         let username = window.localStorage.getItem("username")
-        setProfile("/user/" + username + "/")
+        setProfile("/users/" + username + "/")
         if (username) {
             setIsLoggedIn(true)
         } else {
