@@ -5,6 +5,7 @@ import SplashPage from "./pages/SplashPage";
 import FeedPage from "./pages/FeedPage";
 import RegisterUserPage from "./pages/RegisterPage";
 import NewOpportunityPage from "./pages/NewOpportunityPage";
+import OpportunityPage from "./pages/OpportunityPage";
 import UserPage from "./pages/UserPage";
 import UserUpdatePage from "./pages/UserUpdatePage";
 import "./App.css";
@@ -14,6 +15,10 @@ function App() {
     <Router>
 
         <Switch>
+        <Route path="/opportunity/:id">
+            <OpportunityPage />
+          </Route>
+
           <Route path="/opportunity">
             <FeedPage />
           </Route>
@@ -26,10 +31,9 @@ function App() {
             <LoginPage />
           </Route>
 
-          <Route path="/NewOpportunity">
+          <Route path="/newopportunity">
             <NewOpportunityPage />
           </Route>
-
 
           <Route exact path="/users/:username">
             <UserPage />

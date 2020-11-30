@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory, useParams, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./LoginForm.css";
 
 function LoginForm() {
@@ -8,91 +8,82 @@ function LoginForm() {
     password: "",
   });
 
+  const [errorMessage, setErrorMessage] = useState(null)
+
   const history = useHistory();
 
   const handleChange = (e) => {
-    const { id, value } = e.target;
-    setCredentials((prevCredentials) => ({
-      ...prevCredentials,
-      [id]: value,
-    }));
+      const { id, value } = e.target;
+      setCredentials((prevCredentials) => ({
+          ...prevCredentials,
+          [id]: value,
+      }));
   };
 
   const postData = async () => {
-    const response = await fetch(
-      `${process.env.REACT_APP_API_URL}api-token-auth/`,
-      {
-        method: "post",
-        headers: {
+      const response = await fetch(
+      `${process.env.REACT_APP_API_URL}/api-token-auth/`, {
+      method: "post",
+      headers: {
           "Content-Type": "application/json",
-        },
-        body: JSON.stringify(credentials),
+      },
+      body: JSON.stringify(credentials),
       }
-    );
-    return response.json();
+      );
+      return response.json();
   };
-
-  const { id } = useParams();
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (credentials.username && credentials.password) {
-      postData().then((response) => {
-        window.localStorage.setItem("token", response.token);
-        history.push("/");
-        window.location.reload(true);
-      });
-    }
-  };
+      e.preventDefault();
+      if (credentials.username && credentials.password) {
+          postData().then((response) => {
+          window.localStorage.setItem("token", response.token);
+          window.localStorage.setItem("username", credentials.username)
 
-  const handleCancel = (e) => {
-    e.preventDefault();
-    history.push("/");
-    window.location.reload(true);
+          if (response.token !=null) {
+              //handleLoginClick
+              history.goBack();
+              // history.push("/");
+          }
+          else if (response.non_field_errors) {
+              setErrorMessage(response.non_field_errors)
+              setCredentials({password: ""})
+          }
+      });
+      }
   };
 
   return (
-    <div className="LoginForm">
+      <div className="form-wrap">
+          <h1>Login</h1>
       <form>
-        <div>
-          <h2>You are welcome!</h2>
-          <h2>Please login to continue</h2>
-        </div>
-
-        <div>
-          <div>
-            <label htmlFor="username">Username</label>
-            <input
-              type="text"
-              id="username"
-              placeholder="Enter username"
-              onChange={handleChange}
-            />
+          <div className="form-group">
+              <label htmlFor="username">Username</label>
+              <input
+                  type="text"
+                  id="username"
+                  placeholder="Enter username"
+                  onChange={handleChange}
+              />
           </div>
-
-          <div>
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Enter Password"
-              onChange={handleChange}
-            />
+          <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <input 
+                  type="password"
+                  id="password"
+                  placeholder="Enter password"
+                  onChange={handleChange}
+                  value={credentials.password}
+              />
           </div>
-        </div>
-
-        <div>
-          <button onClick={handleCancel}>Cancel</button>
           <button type="submit" onClick={handleSubmit}>
-            Login
+          Login
           </button>
-        </div>
-
-        <div>
-          <Link to={`/register`}>Sign Up</Link>
-        </div>
       </form>
-    </div>
+
+      {errorMessage != null ? <p className="error">{errorMessage}</p> : null}
+
+      </div>
   );
 }
 
