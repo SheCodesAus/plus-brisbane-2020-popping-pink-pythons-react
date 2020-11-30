@@ -214,7 +214,7 @@ function RegisterUserForm() {
       <TextInput
         id="email"
         type="text"
-        label="email"
+        label="Email"
         placeholder="youarewelcome@wordofmouth.com"
         onChange={handleChange}
         error={errorMessages.email}
@@ -222,7 +222,7 @@ function RegisterUserForm() {
       <TextInput
         id="password"
         type="text"
-        label="password"
+        label="Password"
         placeholder="Enter minimum 8 characters"
         onChange={handleChange}
         error={errorMessages.password}
@@ -230,7 +230,7 @@ function RegisterUserForm() {
       <TextInput
         id="name"
         type="text"
-        label="name"
+        label="Name"
         placeholder="Enter your fullname"
         onChange={handleChange}
         error={errorMessages.name}
@@ -238,19 +238,20 @@ function RegisterUserForm() {
       <TextInput
         id="bio"
         type="text"
-        label="bio"
+        label="Bio"
         placeholder="Tell us a little about yourself!"
         onChange={handleChange}
       />
       <TextInput
         id="image"
         type="text"
-        label="image"
+        label="Image"
         placeholder="Enter a url to your profile image"
         onChange={handleChange}
       />
       <TextInput
-        id="image"
+        id="OpportunityOwner"
+        label="Opportunity Owner"
         type="checkbox"
         value="True"
         onChange={handleChange}
