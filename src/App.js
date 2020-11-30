@@ -13,7 +13,7 @@ import "./App.css";
 function App() {
   return (
     <Router>
-
+       <div>
         <Switch>
         <Route path="/opportunity/:id">
             <OpportunityPage />
@@ -21,6 +21,10 @@ function App() {
 
           <Route path="/opportunity">
             <FeedPage />
+          </Route>
+
+          <Route path="/NewOpportunity">
+            <NewOpportunityPage />
           </Route>
 
           <Route path="/register">
@@ -46,8 +50,9 @@ function App() {
           <Route path="/">
             <SplashPage />
           </Route>
-        </Switch>
-
+          
+          </Switch>
+        </div>
     </Router>
   );
 }

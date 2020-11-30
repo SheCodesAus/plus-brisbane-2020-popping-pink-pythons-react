@@ -8,12 +8,10 @@ function OpportunityPage() {
     const { id } = useParams();
     
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}/opportunity/${id}`)
-        .then((results) => {
-        return results.json();
-        })
-        .then((data) => {
-        setOpportunityData(data);
+        fetch(`${process.env.REACT_APP_API_URL}/opportunity/${id}/`).then((results) => {
+            return results.json();
+        }).then((data) => {
+            setOpportunityData(data);
         });
     }, []);
 
@@ -21,7 +19,7 @@ function OpportunityPage() {
         <div>
             <Header />
             <div>
-                <h1>{ opportunityData.title}</h1>
+                <h1>{opportunityData.title}</h1>
                 <h3>Created at: {convertDateTime(opportunityData.date_created,0)}</h3>
                 {/* <h3> {` Status: $ { opportunityData.is_open} `} </h3> */}
                 <h3>Opportunity Objectives:</h3>
