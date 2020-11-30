@@ -35,7 +35,7 @@ function App() {
             <NewOpportunityPage />
           </Route>
 
-          <Route exact path="/users/:username">
+          <Route path="/users/:username">
             <UserPage />
           </Route>
 

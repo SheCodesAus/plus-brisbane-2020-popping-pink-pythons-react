@@ -1,6 +1,38 @@
-.profile-container{
+.dont-show {
+    display: none;
+}
+
+.profile-info {
+    display: flex;
+
+}
+
+.prof-container-img {
+    height: auto;
+    width: 30%;
+}
+
+.prof-container-info {
+    width: 65%;
+    border: 2px solid var(--dark-color);
+    margin-left: 20px;
+}
+
+.prof-container-img img {
+    object-fit: cover;
+    width: 100%;
+    
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* .profile-container{
     display:flex;
     flex-direction: row;
     margin: 20px;
-}
-
+} */
