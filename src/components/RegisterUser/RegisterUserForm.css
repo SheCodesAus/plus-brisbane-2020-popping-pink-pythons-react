@@ -11,9 +11,9 @@
 
 .form-wrap {
   display: block;
-  background-color: rgba(165,113,175, 0.2);
+  background-color: rgba(139,83,143, .95);
   padding: 15px 25px;
-  color: #333;
+  color: #000;
   border-radius: 5px;
   margin-top: 15px;
   margin-right: 15px;
@@ -21,25 +21,29 @@
 
 .form-wrap .form-group label, .form-wrap p {
   display: block;
-  color: #666;
+  color:  #FEDC2A;
   padding-top: 10px;
+  font-size: 20px;
 }
-
 
 .form-wrap .form-group input, textarea {
   width: 95%;
   padding: 10px;
   border: #ddd 1px solid;
   border-radius: 5px;
-  color: #666;
+  color: #000;
+  font-size: 20px;
 }
 
 .form-wrap button {
-  font-size: 1em;
+  font-size: 15px;
   margin-top: 20px;
   color: #666;
+  background-color: #ddd;
 }
 
 .form-wrap button:hover {
-  background-color: rgba(52,170,191, 0.7);
+  background-color: #000;
+  color:  #FEDC2A;
+  font-size: medium;
 }
