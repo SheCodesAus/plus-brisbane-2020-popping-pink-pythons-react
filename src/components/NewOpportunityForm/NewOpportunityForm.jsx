@@ -63,43 +63,43 @@ function NewOpportunityForm() {
 
   return (
     <form>
-      <div>
+      <div className="form-wrap">
         <label htmlFor="title">Opportunity Title</label>
         <input type="text" id="title" onChange={handleChange} />
       </div>
-      <div>
+      <div className="form-wrap">
         <label htmlFor="location">Location</label>
         <input type="text" id="location" onChange={handleChange} />
       </div>
-      <div>
+      <div className="form-wrap">
         <label htmlFor="organisation">Organisation</label>
         <input type="text" id="organisation" onChange={handleChange} />
       </div>
-      <div>
+      <div className="form-wrap">
         <label htmlFor="description">Description</label>
         <input type="text" id="description" onChange={handleChange} />
       </div>
-      <div>
+      <div className="form-wrap">
         <label htmlFor="objectives">Objectives</label>
         <input type="text" id="objectives" onChange={handleChange} />
       </div>
-      <div>
+      <div className="form-wrap">
         <label htmlFor="image">Image</label>
         <input type="text" id="image" onChange={handleChange} />
       </div>
-      <div>
+      <div className="form-wrap">
         <label htmlFor="start_date">Start Date</label>
         <input type="date" id="start_date" onChange={handleChange} />
       </div>
-      <div>
+      <div className="form-wrap">
         <label htmlFor="close_date">Close Date</label>
         <input type="date" id="close_date" onChange={handleChange} />
       </div>
-      <div>
+      <div className="form-wrap">
         <label htmlFor="amount">Amount</label>
         <input type="number" id="amount" onChange={handleChange} />
       </div>
-      <div>
+      <div className="form-wrap">
         <label htmlFor="opp_type">Opportunity Type</label>
         <input type="text" id="opp_type" onChange={handleChange} />
       </div>
