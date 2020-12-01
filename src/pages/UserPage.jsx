@@ -1,48 +1,59 @@
-
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import '../index.css';
+import convertDateTime from "../components/helpers/DateConverter";
+import "./UserPage.css"
 import Header from "../components/Header/Header";
 
 function UserPage() {
-    const [userData, setUserData] = useState([]);
-    // const { username } = useParams();
-    const username = window.sessionStorage.getItem("username");
+    const [userData, setUserData] = useState( [] );
+    const { username } = useParams();
+    const [noUser, setNoUser] = useState(false)
 
+    let token = window.localStorage.getItem("token");
 
+   
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}/users/${username}`)
-        .then((results) => {
-            return results.json();
-        })
+        const headers = token ? {
+            Authorization: `Token ${token}`,
+        } : {}
+        fetch(`${process.env.REACT_APP_API_URL}/users/${username}`, {
+            headers
+         })
         .then((data) => {
             setUserData(data);
         });
-    },[username]);
+    }, [username]);
 
-
-    return (
-        <div>
+    if (noUser === true) {
+        return (
+            <div>
                 <Header />
-
-            <div className="profile-container">
-                <div className="profile">
-                    <img alt="" className="profile-img" src={userData.image} />
-                </div>
-
-                    <h2>{userData.username}</h2>
-                    <h3>Joined {userData.date_joined}</h3>
-
-                <div className="profile">
-                    <h2>{userData.favourites}</h2>
-                </div>
-                <div className="profile">
-                    <h2>Bio</h2>
-                    <p>{userData.bio}</p>
-                </div>
+                <h1>This user doesn't exist</h1>
             </div>
-        </div>
-    );
+        )
+    } else {
+        return (
+            <div className="outer-container">
+                <Header />
+                <h1>{userData.username}</h1>
+
+                <div className="profile-container">
+                    <div className="img-container">
+                        <img alt="" className="profile-img" src={userData.image} />
+                    </div>
+                    <div>
+                        <h3>Member since {convertDateTime(userData.date_created,0)}</h3>
+                        <h3>{userData.num_fav}</h3>
+                        
+                    </div>
+                    <div className="bio-container">
+                        <h3>Bio</h3>
+                        <p>{userData.bio}</p>
+                    </div>
+               </div> 
+            </div>
+        );
+    }
 }
 
 export default UserPage;

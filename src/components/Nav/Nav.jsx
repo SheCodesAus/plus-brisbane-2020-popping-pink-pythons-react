@@ -1,7 +1,7 @@
 import React, { useEffect, useState }  from "react"
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom"
-import LoginControl from "../../helpers/Login"
+import LoginControl from "../helpers/Login"
 import "./Nav.css"
 
 function Nav() {
@@ -12,7 +12,7 @@ function Nav() {
 
     useEffect(() => {
         let username = window.localStorage.getItem("username")
-        setProfile("/user/" + username + "/")
+        setProfile("/users/" + username + "/")
         if (username) {
             setIsLoggedIn(true)
         } else {
