@@ -6,47 +6,14 @@ import ButtonForms from "../../components/Button/ButtonForms";
 import TittleText from "../../components/TitleText/TitleText";
 
 function LoginForm() {
+  //variables
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
   });
-
-  const [errorMessages, setErrors] = useState({
-    username: "",
-    password: "",
-  });
-
-  const validEmailRegex = RegExp(
-    /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i
-  );
-
-  const validateInput = () => {
-    let errors = { ...errorMessages };
-
-    errors.username = validEmailRegex.test(credentials.username)
-      ? ""
-      : "Enter a valid username!";
-
-    errors.password =
-      credentials.password.length < 8
-        ? "Password needs to be 8 characters or longer"
-        : "";
-
-    return errors;
-  };
-
-  const validateForm = () => {
-    const errors = validateInput();
-    const firstValidationError = Object.values(errors).find(
-      (error) => error.length > 0
-    );
-    setErrors(errors);
-    return firstValidationError == undefined;
-  };
-
   const history = useHistory();
 
-  //Methods
+  //method
   const handleChange = (e) => {
     const { id, value } = e.target;
     setCredentials((prevCredentials) => ({
@@ -57,7 +24,7 @@ function LoginForm() {
 
   const postData = async () => {
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}/api-token-auth/`,
+      `${process.env.REACT_APP_API_URL}api-token-auth/`,
       {
         method: "post",
         headers: {
@@ -71,29 +38,24 @@ function LoginForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (validateForm(errorMessages)) {
+    if (credentials.username && credentials.password) {
       postData().then((response) => {
-        window.localStorage.setItem("token", response.token);
-        window.localStorage.setItem("userID", response.user_id);
-        window.localStorage.setItem("is_owner", response.is_owner);
-        if (response.token != null) {
-          history.push("/");
-        } else {
-          let errors = { ...errorMessages };
-          errors.username = response.non_field_errors;
-          errors.password = response.non_field_errors;
-          setErrors(errors);
-        }
+        console.log(response);
+        if (response.token) {
+          window.localStorage.setItem("username", credentials.username);
+          window.localStorage.setItem("token", response.token);
+          window.localStorage.setItem("isAuthenticated", "True");
+          // history.push("/");
+          window.location.reload();
+        } else alert("incorrect username or password");
       });
     }
   };
 
-  const handleKeyPress = (e) => {
-    //triggers if enter key is pressed
-    if (e.key === "Enter") {
-      handleSubmit(e);
-    }
-  };
+  //template
+  if (localStorage.username) {
+    return <div>{localStorage.username} is logged in</div>;
+  }
 
   //Template
   return (
@@ -104,8 +66,8 @@ function LoginForm() {
         type="username"
         label="Username"
         placeholder="Enter your username"
-        onChange={handleChange}
-        error={errorMessages.username}
+        // onChange={handleChange}
+        // error={errorMessages.username}
       />
       <TextInput
         id="password"
@@ -113,8 +75,8 @@ function LoginForm() {
         label="Password"
         placeholder="xxxxxxxx"
         onChange={handleChange}
-        onKeyPress={handleKeyPress}
-        error={errorMessages.password}
+        // onKeyPress={handleKeyPress}
+        // error={errorMessages.password}
       />
       <ButtonForms value="Login" onClick={handleSubmit} type="submit" />
     </div>
