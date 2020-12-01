@@ -8,7 +8,7 @@ function LoginPage() {
       <div id="header">
         <Header />
       </div>
-      <LoginForm />;
+      <LoginForm />
     </div>
     
   )
