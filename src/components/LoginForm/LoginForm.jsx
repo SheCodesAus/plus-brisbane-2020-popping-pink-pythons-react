@@ -116,7 +116,7 @@ function LoginForm() {
 
     errors.username = validEmailRegex.test(credentials.username)
       ? ""
-      : "Enter a valid email address!";
+      : "Enter a valid username!";
 
     errors.password =
       credentials.password.length < 8
@@ -192,9 +192,9 @@ function LoginForm() {
       <TittleText title="Login" />
       <TextInput
         id="username"
-        type="email"
-        label="Email"
-        placeholder="youarewelcome@wordofmouth.com"
+        type="username"
+        label="username"
+        placeholder="Enter your username"
         onChange={handleChange}
         error={errorMessages.username}
       />
