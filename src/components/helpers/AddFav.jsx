@@ -5,14 +5,13 @@ const [favorites, setFavorites] = useState([]);
 const getArray = JSON.parse(localStorage.getItem('favorites') || '0');
 
     useEffect(() => {
-        if (getArray !==0) {
-            setFavorites([...getArray])
-    } [] },)
+            setFavorites([...getArray]),
+   [] },)
 
-const addFav = (props: any) => {
+const addFav = (props) => {
     let array = favorites;
     let addArray = true;
-    array.map((item: any, key:number) => {
+    array.map((item, key) => {
             if (item === props.i){
                 array.slice(key, 1);
                 addArray = false;
@@ -33,8 +32,8 @@ const addFav = (props: any) => {
 
     } }
  
-const favList = () => {
-    var favList: any = [{}]
+const fav = () => {
+    var favList = [{}]
     const getArray = JSON.parse(localStorage.getItem('favorites') || '0');
     for  (var i = 0; i < getArray.length; i++){
         let x = getArray[i]
@@ -70,9 +69,9 @@ return (
                     </tr>
                 </thead>
                 <tbody>
-                    {favList.map((items: any, i: number) => (
+                    {favList.map((items, i) => (
                         <tr key={i}>
-                            {(Object.values(favList[i])).map((value: any, key:number) => (
+                            {(Object.values(favList[i])).map((value, key) => (
                               <td key={key}>{value}</td>
                             ))}
                         </tr>
