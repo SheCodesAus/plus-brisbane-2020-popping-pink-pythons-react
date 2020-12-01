@@ -11,6 +11,7 @@ function LoginForm() {
     username: "",
     password: "",
   });
+
   const history = useHistory();
 
   //method
@@ -24,7 +25,7 @@ function LoginForm() {
 
   const postData = async () => {
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}api-token-auth/`,
+      `${process.env.REACT_APP_API_URL}/api-token-auth/`,
       {
         method: "post",
         headers: {
@@ -45,17 +46,11 @@ function LoginForm() {
           window.localStorage.setItem("username", credentials.username);
           window.localStorage.setItem("token", response.token);
           window.localStorage.setItem("isAuthenticated", "True");
-          // history.push("/");
-          window.location.reload();
-        } else alert("incorrect username or password");
+          history.push("/");
+        } else alert("Incorrect username or password");
       });
     }
   };
-
-  //template
-  if (localStorage.username) {
-    return <div>{localStorage.username} is logged in</div>;
-  }
 
   //Template
   return (
