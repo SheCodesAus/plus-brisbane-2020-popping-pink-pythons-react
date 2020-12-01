@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import SplashPage from "./pages/SplashPage";
 import FeedPage from "./pages/FeedPage";
-import RegisterUserPage from "./pages/RegisterPage";
+import RegisterUserPage from "./pages/RegisterUserPage";
 import NewOpportunityPage from "./pages/NewOpportunityPage";
 import OpportunityPage from "./pages/OpportunityPage";
 import UserPage from "./pages/UserPage";
@@ -13,9 +13,9 @@ import "./App.css";
 function App() {
   return (
     <Router>
-       <div>
+      <div>
         <Switch>
-        <Route path="/opportunity/:id">
+          <Route path="/opportunity/:id">
             <OpportunityPage />
           </Route>
 
@@ -50,9 +50,8 @@ function App() {
           <Route path="/">
             <SplashPage />
           </Route>
-          
-          </Switch>
-        </div>
+        </Switch>
+      </div>
     </Router>
   );
 }

@@ -1,0 +1,6 @@
+.submit-opportunity-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c3a3c9;
+}
