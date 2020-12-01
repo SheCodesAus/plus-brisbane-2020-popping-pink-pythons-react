@@ -256,6 +256,14 @@ function NewOpportunityForm() {
         onChange={handleChange}
         error={errorMessages.title}
       />
+      <TextInput
+        id="location"
+        type="text"
+        label="Opportunity Location"
+        placeholder="Where is your opportunity located?!"
+        onChange={handleChange}
+        error={errorMessages.title}
+      />
       <TextArea
         id="description"
         type="text"
