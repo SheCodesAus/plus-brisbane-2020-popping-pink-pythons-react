@@ -1,0 +1,11 @@
+.column-1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+}
+
+.column-2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+}
