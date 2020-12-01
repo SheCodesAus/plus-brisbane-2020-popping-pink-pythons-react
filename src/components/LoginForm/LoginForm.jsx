@@ -61,7 +61,7 @@ function LoginForm() {
         type="username"
         label="Username"
         placeholder="Enter your username"
-        // onChange={handleChange}
+        onChange={handleChange}
         // error={errorMessages.username}
       />
       <TextInput
