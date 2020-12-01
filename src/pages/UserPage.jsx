@@ -37,20 +37,20 @@ function UserPage() {
                 <Header />
 
                 <div className="profile-container">
-                    <div className="profile-top-">
-                        <div className="profile-img">
+                    <div className="profile-top-container">
+                        <div id="profile-img-container">
                             <img alt="" className="profile-img" src={userData.image} />
                         </div>
-                        <div className="profile-info">
+                        <div id="profile-info-container">
                             <h2>{userData.username}</h2>
-                            <h2>Joined on {convertDateTime(userData.date_created,0)}</h2>
+                            <h3>Joined on {convertDateTime(userData.date_created,0)}</h3>
                         </div>
-                        <div className="profile-faves">
+                        <div id="profile-faves-container">
                             <h2>{userData.num_fav}</h2>
                         </div>
                     </div>
-                    <div className="profile-bottom">
-                        <div className="bio-info">
+                    <div className="profile-bottom-container">
+                        <div id="bio-container">
                             <h2>Bio</h2>
                             <p>{userData.bio}</p>
                         </div>
