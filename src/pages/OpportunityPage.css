@@ -1,12 +1,16 @@
 .opportunityPage{
     display:flex;
+    margin-right: 50px;
+    margin-left: 50px;
     background-color: #c3a3c9;
+    width: 100%;
 
 }
 .column-1{
     display: flex;
     flex-wrap: wrap;
     flex-flow: column;
+    padding: 0 40px 0 40px;
 }
 
 .column-2{
@@ -14,4 +18,14 @@
     flex-wrap: wrap;
     flex-flow: column;
     margin-top: 50px;
+    padding: 0 40px 0 40px;
+}
+
+.button{
+    width: 50%;
+}
+.img{
+    align-items: center;
+    width: 100%;
+    height: 300px;
 }

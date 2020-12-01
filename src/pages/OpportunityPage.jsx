@@ -41,13 +41,12 @@ function OpportunityPage() {
                         <h3>Description:{opportunityData.description}</h3>
                         <h3>Amount required: {opportunityData.amount}</h3>
                         <h3>Link: {opportunityData.link}</h3>
+                        <button className="button" type="submit" onClick={postFavouriteData}>Click</button>
                     </div>
                     <div className="column-2">
                         <h3>Opportunity Objectives:{opportunityData.objectives}</h3>
                     </div>
-                    <div>
-                        <button type="submit" onClick={postFavouriteData}>Click</button>
-                     </div>          
+                             
                 </div>
         </div>
     );
