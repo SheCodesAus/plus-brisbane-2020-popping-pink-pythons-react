@@ -5,9 +5,9 @@ import convertDateTime from "../components/helpers/DateConverter";
 import "./OpportunityPage.css"
 
 function OpportunityPage() {
-    const [opportunityData, setOpportunityData] = useState([]);
-    const { id } = useParams();
-
+  const [opportunityData, setOpportunityData] = useState([]);
+  const { id } = useParams();
+  
     let opportunityId = window.localStorage.getItem("opportunity_id").toString();
 
     useEffect(() => {

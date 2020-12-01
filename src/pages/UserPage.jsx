@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import convertDateTime from "../components/helpers/DateConverter";
 import "./UserPage.css"
 import Header from "../components/Header/Header";
 
 function UserPage() {
     const [userData, setUserData] = useState( [] );
-    const { username } = useParams();
     const [noUser, setNoUser] = useState(false)
 
-    let token = window.localStorage.getItem("token");
-
-   
+ 
     useEffect(() => {
-        const headers = token ? {
-            Authorization: `Token ${token}`,
-        } : {}
-        fetch(`${process.env.REACT_APP_API_URL}/users/${username}`, {
-            headers
-         })
-        .then((data) => {
+        let token = window.localStorage.getItem("token");
+        fetch(`${process.env.REACT_APP_API_URL}/users/currentuser`,{
+            method: "get",
+            headers: {
+            'Authorization': `Token ${token}`
+        }})
+        .then((results) => {
+            return results.json();
+        }).then((data) => {
             setUserData(data);
+            console.log(data)
         });
-    }, [username]);
+    }, []);
+
 
     if (noUser === true) {
         return (
@@ -42,12 +42,12 @@ function UserPage() {
                         <img alt="" className="profile-img" src={userData.image} />
                     </div>
                     <div>
-                        <h3>Member since {convertDateTime(userData.date_created,0)}</h3>
-                        <h3>{userData.num_fav}</h3>
+                        <h2>Joined {convertDateTime(userData.date_created,0)}</h2>
+                        <h2>{userData.num_fav}</h2>
                         
                     </div>
                     <div className="bio-container">
-                        <h3>Bio</h3>
+                        <h2>Bio</h2>
                         <p>{userData.bio}</p>
                     </div>
                </div> 
