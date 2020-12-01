@@ -1,0 +1,59 @@
+.opportunityPage{
+    display:flex;
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 90%;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+
+}
+.column-1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    padding: 40px;
+    width: 60%;
+    background-color: #c3a3c9;
+    margin: 20px;
+}
+
+.column-2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    margin-top: 50px;
+    padding: 40px;
+    width: 40%;
+    background-color: #c3a3c9;
+    margin: 20px;
+}
+.title{
+    margin-bottom: 50px;
+}
+
+#actions{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.button{
+    width: 80%;
+    height: 50px;
+    background-color: black;
+    color: blanchedalmond;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px gray;
+    margin-left: 50px;
+
+}
+.column-1 img{
+    align-items: center;
+    width: auto;
+    height: 300px;
+    object-fit:contain;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px gray;
+    padding: 40px;
+}
