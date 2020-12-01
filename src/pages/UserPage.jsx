@@ -19,7 +19,7 @@ function UserPage() {
             return results.json();
         }).then((data) => {
             setUserData(data);
-            console.log(data)
+            // console.log(data)
         });
     }, []);
 
@@ -35,22 +35,31 @@ function UserPage() {
         return (
             <div className="outer-container">
                 <Header />
-                <h1>{userData.username}</h1>
 
                 <div className="profile-container">
-                    <div className="img-container">
-                        <img alt="" className="profile-img" src={userData.image} />
+                    <div className="profile-top-">
+                        <div className="profile-img">
+                            <img alt="" className="profile-img" src={userData.image} />
+                        </div>
+                        <div className="profile-info">
+                            <h2>{userData.username}</h2>
+                            <h2>Joined on {convertDateTime(userData.date_created,0)}</h2>
+                        </div>
+                        <div className="profile-faves">
+                            <h2>{userData.num_fav}</h2>
+                        </div>
                     </div>
-                    <div>
-                        <h2>Joined {convertDateTime(userData.date_created,0)}</h2>
-                        <h2>{userData.num_fav}</h2>
-                        
+                    <div className="profile-bottom">
+                        <div className="bio-info">
+                            <h2>Bio</h2>
+                            <p>{userData.bio}</p>
+                        </div>
                     </div>
-                    <div className="bio-container">
-                        <h2>Bio</h2>
-                        <p>{userData.bio}</p>
-                    </div>
-               </div> 
+                </div>
+
+                <div className="favourites-container">
+                    <p>this is where the faves go :)</p>
+               </div>
             </div>
         );
     }
