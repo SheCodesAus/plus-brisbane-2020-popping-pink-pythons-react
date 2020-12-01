@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import "./NewOpportunityForm.css";
 
@@ -62,52 +62,62 @@ function NewOpportunityForm() {
   };
 
   return (
-    <form>
-      <div>
-        <label htmlFor="title">Opportunity Title</label>
-        <input type="text" id="title" onChange={handleChange} />
-      </div>
-      <div>
-        <label htmlFor="location">Location</label>
-        <input type="text" id="location" onChange={handleChange} />
-      </div>
-      <div>
-        <label htmlFor="organisation">Organisation</label>
-        <input type="text" id="organisation" onChange={handleChange} />
-      </div>
-      <div>
-        <label htmlFor="description">Description</label>
-        <input type="text" id="description" onChange={handleChange} />
-      </div>
-      <div>
-        <label htmlFor="objectives">Objectives</label>
-        <input type="text" id="objectives" onChange={handleChange} />
-      </div>
-      <div>
-        <label htmlFor="image">Image</label>
-        <input type="text" id="image" onChange={handleChange} />
-      </div>
-      <div>
-        <label htmlFor="start_date">Start Date</label>
-        <input type="date" id="start_date" onChange={handleChange} />
-      </div>
-      <div>
-        <label htmlFor="close_date">Close Date</label>
-        <input type="date" id="close_date" onChange={handleChange} />
-      </div>
-      <div>
-        <label htmlFor="amount">Amount</label>
-        <input type="number" id="amount" onChange={handleChange} />
-      </div>
-      <div>
-        <label htmlFor="opp_type">Opportunity Type</label>
-        <input type="text" id="opp_type" onChange={handleChange} />
-      </div>
-
-      <button type="submit" onClick={handleSubmit}>
-        Create Opportunity
-      </button>
-    </form>
+    <div className="submit-opportunity-form">
+      <TitleText title="Create an Opportunity" />
+      <TextInput
+        id="title"
+        type="text"
+        label="Opportunity Title"
+        placeholder="Give your Opportunity a welcoming name!"
+        onChange={handleChange}
+        error={errorMessages.title}
+      />
+      <TextInput
+        id="location"
+        type="text"
+        label="Opportunity Location"
+        placeholder="Where is your opportunity located?"
+        onChange={handleChange}
+        error={errorMessages.title}
+      />
+      <TextInput
+        id="organisation"
+        type="text"
+        label="Organisation"
+        placeholder="Name of the organisation"
+        onChange={handleChange}
+        error={errorMessages.title}
+      />
+      <TextArea
+        id="description"
+        type="text"
+        label="Opportunity Summary"
+        placeholder="Tell us what this Opportunity is all about"
+        error={errorMessages.description}
+        onChange={handleChange}
+      />
+      <TextInput
+        id="amount"
+        type="integer"
+        label="Opportunity Amount Offered"
+        placeholder="0"
+        onChange={handleChange}
+        error={errorMessages.amount}
+      />
+      <TextInput
+        id="image"
+        type="url"
+        label="Image URL"
+        placeholder="Enter a URL to your most eye catching photo"
+        onChange={handleChange}
+        error={errorMessages.image}
+      />
+      <ButtonForms
+        value="Create Project"
+        onClick={handleSubmit}
+        type="submit"
+      />
+    </div>
   );
 }
 
