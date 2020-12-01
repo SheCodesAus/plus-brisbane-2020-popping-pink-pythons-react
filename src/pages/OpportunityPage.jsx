@@ -40,7 +40,7 @@ function OpportunityPage() {
                         <p>Organisation: {opportunityData.organisation}</p>
                         <p>Description:{opportunityData.description}</p>
                         <p>Amount required: {opportunityData.amount}</p>
-                        <div ClassName="actions">
+                        <div id="actions">
                             <div>Link: {opportunityData.link}</div>
                             <div><button className="button" type="submit" onClick={postFavouriteData}>Add to  Favourites</button></div>
                         </div>
