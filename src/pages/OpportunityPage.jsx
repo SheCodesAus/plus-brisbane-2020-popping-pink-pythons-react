@@ -33,20 +33,22 @@ function OpportunityPage() {
             <Header />
                 <div className="opportunityPage">
                     <div className="column-1">
-                        <h1>{opportunityData.title}</h1>
+                        <h1 className="title">{opportunityData.title}</h1>
                         <img src={opportunityData.image} />
-                        <h3>Created at: {convertDateTime(opportunityData.date_created,0)}</h3>
-                        <h3>Location: {opportunityData.location}</h3>
-                        <h3>Organisation: {opportunityData.organisation}</h3>
-                        <h3>Description:{opportunityData.description}</h3>
-                        <h3>Amount required: {opportunityData.amount}</h3>
-                        <h3>Link: {opportunityData.link}</h3>
-                        <button className="button" type="submit" onClick={postFavouriteData}>Click</button>
+                        <p>Created at: {convertDateTime(opportunityData.date_created,0)}</p>
+                        <p>Location: {opportunityData.location}</p>
+                        <p>Organisation: {opportunityData.organisation}</p>
+                        <p>Description:{opportunityData.description}</p>
+                        <p>Amount required: {opportunityData.amount}</p>
+                        <div ClassName="actions">
+                            <div>Link: {opportunityData.link}</div>
+                            <div><button className="button" type="submit" onClick={postFavouriteData}>Add to  Favourites</button></div>
+                        </div>
                     </div>
                     <div className="column-2">
-                        <h3>Opportunity Objectives:{opportunityData.objectives}</h3>
-                    </div>
-                             
+                        <h3>Opportunity Objectives:</h3>
+                        <p>{opportunityData.objectives}</p>
+                    </div>                             
                 </div>
         </div>
     );
