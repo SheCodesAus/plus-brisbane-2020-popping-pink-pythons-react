@@ -57,7 +57,7 @@ function OpportunityPage() {
                     <div className="column-2">
                         <div id="objectives"><h2>Opportunity Objectives:</h2></div>
                         <div id="objectives-text"><p>{opportunityData.objectives}</p></div>
-                        <div id="location-map"><img src={`https://maps.googleapis.com/maps/api/staticmap?center=${opportunityData.location}&zoom=13&size=600x300&maptype=roadmap&key=AIzaSyCNap1Ggt6008bL_GDv0D2lDJ-gMyJfr9U`} /></div>
+                        <div id="location-map"><img src={`https://maps.googleapis.com/maps/api/staticmap?center=${opportunityData.location}&zoom=13&size=600x300&maptype=roadmap&markers=color:purple%7C${opportunityData.location}&key=AIzaSyCNap1Ggt6008bL_GDv0D2lDJ-gMyJfr9U`} /></div>
                     </div>                             
                 </div>
             </div>    
