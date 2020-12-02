@@ -42,6 +42,7 @@ function OpportunityPage() {
             <div><h1 className="title">{opportunityData.title}</h1></div>
                 <div className="opportunityPage">
                     <div className="column-1">
+                        <img src={opportunityData.image} />
                         <div id="oppDetails"><p>Created: {convertDateTime(opportunityData.date_created,0)}</p>
                             <p>Location: {opportunityData.location}</p>
                             <p>Organisation: {opportunityData.organisation}</p>
@@ -54,7 +55,6 @@ function OpportunityPage() {
                     </div>
                     
                     <div className="column-2">
-                        <img src={opportunityData.image} />
                         <div id="objectives"><h2>Opportunity Objectives:</h2></div>
                         <div id="objectives-text"><p>{opportunityData.objectives}</p></div>
                     </div>                             
