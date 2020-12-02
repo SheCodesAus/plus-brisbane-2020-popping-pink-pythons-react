@@ -46,7 +46,7 @@ function LoginForm() {
           window.localStorage.setItem("username", credentials.username);
           window.localStorage.setItem("token", response.token);
           window.localStorage.setItem("isAuthenticated", "True");
-          history.push("/");
+          history.push("/opportunity");
         } else alert("Incorrect username or password");
       });
     }
