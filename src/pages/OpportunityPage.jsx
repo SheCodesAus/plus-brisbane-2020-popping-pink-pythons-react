@@ -8,7 +8,7 @@ function OpportunityPage() {
   const [opportunityData, setOpportunityData] = useState([]);
   const { id } = useParams();
   
-    let opportunityId = window.localStorage.getItem("opportunity_id").toString();
+    let opportunityId = window.localStorage.getItem("opportunity_id");
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}/opportunity/${id}/`).then((results) => {
@@ -19,12 +19,17 @@ function OpportunityPage() {
     }, []);
 
     const postFavouriteData = async () => {
+        let token = window.localStorage.getItem("token");
         const response = await fetch(`${process.env.REACT_APP_API_URL}/favourites/`, {
-        method: "post",
-        headers: {
-            "Content-Type": "application/json",
+        method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                "Content-Type": 'application/json',
+                'Authorization': `Token ${token}`
         },
-        body: JSON.stringify({id:{opportunityId}})
+            body: JSON.stringify({
+                'id': `${opportunityId}`
+            }),
         });
         return response.json();};
 
@@ -37,19 +42,19 @@ function OpportunityPage() {
             <div><h1 className="title">{opportunityData.title}</h1></div>
                 <div className="opportunityPage">
                     <div className="column-1">
-                        <img src={opportunityData.image} />
-                        <div id="oppDetails"><p>Created at: {convertDateTime(opportunityData.date_created,0)}</p>
+                        <div id="oppDetails"><p>Created: {convertDateTime(opportunityData.date_created,0)}</p>
                             <p>Location: {opportunityData.location}</p>
                             <p>Organisation: {opportunityData.organisation}</p>
                             <h3>Details</h3><p>{opportunityData.description}</p>
-                            <p>Amount required: {opportunityData.amount}</p></div>
+                            <p>{opportunityData.opp_type} amount: {opportunityData.amount}</p></div>
                         <div id="actions">
-                            <div>Link: {opportunityData.link}</div>
-                            <div><button className="button" type="submit" onClick={postFavouriteData}>Add to  Favourites</button></div>
+                            <div><a href={opportunityData.opp_link}>Link to Apply</a></div>
+                            <div><button className="button-opp" type="submit" onClick={postFavouriteData}>Add to  Favourites</button></div>
                         </div>
                     </div>
                     
                     <div className="column-2">
+                        <img src={opportunityData.image} />
                         <div id="objectives"><h2>Opportunity Objectives:</h2></div>
                         <div id="objectives-text"><p>{opportunityData.objectives}</p></div>
                     </div>                             
