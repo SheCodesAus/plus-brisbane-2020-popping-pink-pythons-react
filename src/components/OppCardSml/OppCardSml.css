@@ -18,3 +18,10 @@
     object-fit:contain;
 }
 
+.sml-card-container{
+    width:95%;
+}
+
+.sml-card-container a{
+    text-decoration: none;
+}

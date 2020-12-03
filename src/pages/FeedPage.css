@@ -1,0 +1,14 @@
+.search-container {
+    position: absolute;
+    top: 29%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+}
+
+.search-container input{
+    height: 50px;
+    width: 500px;
+    font-size: 30px;
+    font-family:'satisfy';
+    padding:5px;
+}
