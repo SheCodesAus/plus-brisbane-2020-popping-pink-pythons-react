@@ -42,10 +42,15 @@
     padding: 40px;
 }
 
-#location-map img{
+#location-map {
     display:flex;
     flex-wrap: wrap;
     align-self: center;
+    margin-top: 20px;
+    background-color: whitesmoke;
+}
+
+#location-map img{
     width: 100%;
     margin-top: 40px;
     object-fit:contain;
