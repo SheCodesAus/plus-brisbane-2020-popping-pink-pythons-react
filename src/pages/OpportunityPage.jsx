@@ -40,8 +40,8 @@ function OpportunityPage() {
             <div className="opportunityPage">
                     <div className="column-1">
                         <img src={opportunityData.image} />
-                        <div id="oppDetails"><p>Created: {convertDateTime(opportunityData.date_created,0)}</p>
-                            <p>Location: {opportunityData.location}</p>
+                        <div id="oppDetails">
+                            <p>Created: {convertDateTime(opportunityData.date_created,0)}</p>
                             <p>Organisation: {opportunityData.organisation}</p>
                             <h3>Details</h3><p>{opportunityData.description}</p>
                             <p>{opportunityData.opp_type} amount: {opportunityData.amount}</p>

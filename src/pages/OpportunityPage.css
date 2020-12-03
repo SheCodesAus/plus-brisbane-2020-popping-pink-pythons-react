@@ -51,7 +51,7 @@
 }
 
 #location-map img{
-    width: 100%;
+    width: auto;
     margin-top: 40px;
     object-fit:contain;
     border: 1px solid black;
