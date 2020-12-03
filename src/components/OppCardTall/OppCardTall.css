@@ -23,3 +23,15 @@
     text-decoration: none;
     color: black;
 }
+
+@media (min-width: 375px) {
+    .opportunity-card-tall{
+        width: 50%;
+    }
+}
+
+@media (min-width: 576px) {
+    .opportunity-card-tall{
+        width: 80%;
+    }
+}
