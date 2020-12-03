@@ -25,7 +25,7 @@ function OppCardSml(props) {
             <button className="button-default" onClick={handleClick}>
                 <img src={opportunityData.image} />
                 <h3>{opportunityData.title}</h3>
-                <h4>{`Amount: $${opportunityData.amount}`}</h4>
+                <h4>{`${opportunityData.opp_type} amount: $${opportunityData.amount}`}</h4>
             </button>
             <Modal
                 isShowing={isShowing}

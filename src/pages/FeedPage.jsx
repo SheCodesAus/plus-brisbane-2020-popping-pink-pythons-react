@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import OppCardSml from '../components/OppCardSml/OppCardSml'
 import '../App.css';
+import './FeedPage.css';
 import Header from "../components/Header/Header";
+import feedHeader from '../components/images/feed-header.png';
 
 function FeedPage() {
     const [opportunityList, setOpportunityList] = useState([]);
     const [latestList, setLatestList] = useState([]);
+    const [q, setQ] = useState("");
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}/opportunity`)
@@ -26,21 +29,24 @@ function FeedPage() {
         setLatestList(data);
         });
     }, []);
-    
+
     return (
         <div>
             <Header />
             <div className="header-container">
-                <div className="header-opportunity-list">
-                    <h2>Feed</h2>
-                </div>
-                <div className="header-latest-list">
-                    <h2>Latest Updates</h2>
+                <img src={feedHeader} />
+                <div className="search-container">
+                    <input 
+                        type="text"
+                        placeholder="Search..."
+                        value={q}
+                        onChange={(e) => setQ(e.target.value)}
+                    />
                 </div>
             </div>
             <div className="feed-page">            
                 <div id="opportunity-list">
-                    {opportunityList.map((opportunityData, key) => {
+                    {opportunityList.filter(opportunity => opportunity.title.toLowerCase().indexOf(q) > -1).map((opportunityData, key) => {
                         return <OppCardSml key={key} opportunityData = {opportunityData} />;
                     })}
                 </div>
