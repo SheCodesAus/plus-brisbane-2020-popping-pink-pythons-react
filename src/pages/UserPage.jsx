@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import convertDateTime from "../components/helpers/DateConverter";
 import "./UserPage.css"
 import Header from "../components/Header/Header";
+import FaveCard from "../components/FaveCard/FaveCard";
 
 function UserPage() {
     const [userData, setUserData] = useState( [] );
@@ -23,7 +24,6 @@ function UserPage() {
         });
     }, []);
 
-
     if (noUser === true) {
         return (
             <div>
@@ -41,32 +41,41 @@ function UserPage() {
                                    <p>header</p> 
                             </div>
 
-                            <div className="grid b"> 
-                                <div className="grid c">
-                                    <img alt="" className="profile-img" src={userData.image} />
-                                </div>
-                                <div className="grid d"> 
-                                    <div className="grid e">
-                                        <h2>{userData.username}</h2>
+                            <div className="grid b">
+                                <div className="grid-profile">
+                                    <div className="grid c">
+                                        <img alt="" className="profile-img" src={userData.image} />
                                     </div>
-                                    <div className="grid f">
-                                        <h3>Joined on {convertDateTime(userData.date_created,0)}</h3>
+                                    <div className="grid d"> 
+                                        <div className="grid e">
+                                            <h1>{userData.username}</h1>
+                                        </div>
+                                        <div className="grid f">
+                                            <h3>Joined on {convertDateTime(userData.date_created,0)}</h3>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="grid g">
-                                    <div className="grid h">
-                                        <h1>1{userData.num_fav}</h1>
-                                        <h3>favourite</h3>
+                                    <div className="action"> 
+                                        <button className="btn hover">Edit
+                                        </button>
                                     </div>
-                                    <div className="grid i">
-                                        <h1>125</h1>
-                                        <h3>interests</h3>
+                                    
+                                        <div className="grid g">
+                                            <div className="grid-stats hover g">
+                                                <div className="grid h">
+                                                    <h1>1{userData.num_fav}</h1>
+                                                    <h3>favourite</h3>
+                                                </div>
+                                                <div className="grid-stats hover i">
+                                                    <h1>125</h1>
+                                                    <h3>interests</h3>
+                                                </div>
+                                                <div className="grid-stats hover j">
+                                                    <h1>4</h1>
+                                                    <h3>connections</h3>
+                                                </div>
+                                            </div>
+                                        </div>                                    
                                     </div>
-                                    <div className="grid j">
-                                        <h1>4</h1>
-                                        <h3>connections</h3>
-                                    </div>
-                                </div>
                             </div>
 
                             <div className="grid k">
@@ -74,7 +83,6 @@ function UserPage() {
                                     <h1>Profile</h1>
                                 </div>
                                 <div className="grid m">
-                                    <h2>Bio</h2>
                                     <p>{userData.bio}</p>
                                 </div>
                             </div>
@@ -84,13 +92,13 @@ function UserPage() {
                                     <h1>Favourites</h1>
                                 </div>
                                 <div className="grid p">
-                                    <p>Favourite #1 - data to be pulled through as card</p>
+                                    < FaveCard />
                                 </div>
                                 <div className="grid q">
-                                    <p>Favourite #2 - data to be pulled through as card</p>
+                                    < FaveCard />
                                 </div>
                                 <div className="grid r">
-                                    <p>Favourite #3 - data to be pulled through as card</p>
+                                    <p> </p>
                                 </div>
                             </div>
                         </div>
