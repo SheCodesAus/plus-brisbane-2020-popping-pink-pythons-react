@@ -35,3 +35,10 @@
         width: 80%;
     }
 }
+
+@media (min-width: 768px) {
+    .opportunity-card-tall{
+        width: 100%;
+    }
+}
+
