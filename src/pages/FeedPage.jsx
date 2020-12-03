@@ -4,6 +4,7 @@ import '../App.css';
 import './FeedPage.css';
 import Header from "../components/Header/Header";
 import feedHeader from '../components/images/feed-header.png';
+import feedHeaderMobile from '../components/images/feed-header-blank.png';
 
 function FeedPage() {
     const [opportunityList, setOpportunityList] = useState([]);
@@ -34,7 +35,12 @@ function FeedPage() {
         <div>
             <Header />
             <div className="header-container">
-                <img src={feedHeader} />
+                <div className="img-laptop">
+                    <img src={feedHeader} />
+                </div>
+                <div className="img-mobile">
+                    <img src={feedHeaderMobile} />
+                </div>
                 <div className="search-container">
                     <input 
                         type="text"
