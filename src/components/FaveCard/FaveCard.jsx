@@ -8,13 +8,13 @@ import Modal from '../helpers/Modal';
 function FaveCard(props) {
     const { favouritesData } = props;
     const { isShowing, toggle } = useModal();
-    const [favouritesId, setFavouritesId] = useState(0);
-    let newFavouritesId = 0;
+    const [opportunityId, setOpportuniyId] = useState(0);
+    let newOpportunityId = 0;
 
 
     const changeId = () => {
-        newFavouritesId = window.localStorage.setItem("favourites_id", favouritesData.id);
-        setFavouritesId(newFavouritesId);
+        newOpportunityId = window.localStorage.setItem("opportunity_id", favouritesData.id);
+        setOpportuniyId(newOpportunityId);
     }
 
     const handleClick = () => {
@@ -34,7 +34,7 @@ function FaveCard(props) {
             <Modal
                 isShowing={isShowing}
                 hide={toggle}
-                favouritesId = {favouritesId}
+                opportunityId = {opportunityId}
             />
         </div>
     );
