@@ -20,4 +20,25 @@
 
 .opportunity-card-tall a{
     width: 100%;
+    text-decoration: none;
+    color: black;
 }
+
+@media (min-width: 375px) {
+    .opportunity-card-tall{
+        width: 50%;
+    }
+}
+
+@media (min-width: 576px) {
+    .opportunity-card-tall{
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .opportunity-card-tall{
+        width: 100%;
+    }
+}
+
