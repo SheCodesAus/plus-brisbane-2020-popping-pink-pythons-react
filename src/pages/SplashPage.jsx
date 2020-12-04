@@ -8,7 +8,6 @@ import ActionButton from '../components/Button/Button';
 function SplashPage() {
     return (
         <div>
-        <Header />
         <div className="flex-container">
             <div className="splash-container">
                 <div className="splash-image">
