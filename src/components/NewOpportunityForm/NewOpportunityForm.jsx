@@ -147,7 +147,7 @@ function NewOpportunityForm() {
         label="Opportunity Location"
         placeholder="Where is your opportunity located?"
         onChange={handleChange}
-        error={errorMessages.title}
+        error={errorMessages.location}
       />
       <TextInput
         id="organisation"
@@ -155,7 +155,7 @@ function NewOpportunityForm() {
         label="Organisation"
         placeholder="Name of the organisation"
         onChange={handleChange}
-        error={errorMessages.title}
+        error={errorMessages.organisation}
       />
       <TextArea
         id="description"
@@ -166,11 +166,11 @@ function NewOpportunityForm() {
         onChange={handleChange}
       />
       <TextInput
-        id="Objectives"
+        id="objectives"
         type="text"
         label="Opportunity Objectives"
         placeholder="What are the key objectives of this opportunity"
-        error={errorMessages.description}
+        error={errorMessages.objectives}
         onChange={handleChange}
       />
       <TextInput
@@ -195,7 +195,6 @@ function NewOpportunityForm() {
         label="Start_Date"
         placeholder="When is the starting date?"
         onChange={handleChange}
-        error={errorMessages.image}
       />
       <TextInput
         id="close_date"
@@ -203,7 +202,6 @@ function NewOpportunityForm() {
         label="Close_Date"
         placeholder="When is the closing date?"
         onChange={handleChange}
-        error={errorMessages.image}
       />
       <TextInput
         id="opp_type"
@@ -211,7 +209,7 @@ function NewOpportunityForm() {
         label="Opportunity Type"
         placeholder="What type of opportunity is this?"
         onChange={handleChange}
-        error={errorMessages.image}
+        error={errorMessages.opp_type}
       />
       <TextInput
         id="opp_link"
@@ -219,7 +217,7 @@ function NewOpportunityForm() {
         label="Opportunity Link"
         placeholder="Provide a link to this opportunity"
         onChange={handleChange}
-        error={errorMessages.image}
+        error={errorMessages.opp_link}
       />
       <ButtonForms
         value="Create Project"
