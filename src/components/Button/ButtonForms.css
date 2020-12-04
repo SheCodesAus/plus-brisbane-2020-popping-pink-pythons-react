@@ -1,9 +1,11 @@
-.btn-container {
+.btn-container-forms {
   margin: 1vw;
 }
 
-.btn {
+.btn-forms {
   display: inline-block;
+  width: 150px;
+  height: 90px;
   padding: 0.35em 1.2em;
   border: 0.1em solid #efe9e9;
   margin: 0 0.3em 0.3em 0;
@@ -19,11 +21,11 @@
   background-color: black;
 }
 
-.btn:hover {
+.btn-forms:hover {
   color: #000000;
   background-color: lightgray;
 }
 
-.btn:focus {
+.btn-forms:focus {
   outline: none;
 }
