@@ -3,8 +3,8 @@ import "./ButtonForms.css";
 
 function ButtonForms({ value, url, ...props }) {
   return (
-    <form className="btn-container" action={url}>
-      <input className="btn" value={value} {...props} />
+    <form className="btn-container-forms" action={url}>
+      <input className="btn-forms" value={value} {...props} />
     </form>
   );
 }

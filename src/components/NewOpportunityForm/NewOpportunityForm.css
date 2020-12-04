@@ -3,4 +3,46 @@
   flex-direction: column;
   align-items: center;
   background-color: #c3a3c9;
+  width: 50%;
+  margin: auto;
+  margin-top: 100px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 5px gray;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 992px) {
+  .submit-opportunity-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5a3b5d;
+    box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    background: -webkit-linear-gradient(bottom left, #c3a3c9 0%, #8b538f 100%);
+    background: -moz-linear-gradient(bottom left, #c3a3c9 0%, #8b538f 100%);
+    background: -o-linear-gradient(bottom left, #c3a3c9 0%, #8b538f 100%);
+    background: linear-gradient(to top right, #c3a3c9 0%, #8b538f 100%); 
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px gray;
+    margin-bottom: 5px;
+  }
+
+  .text-area {
+    height: 5vw;
+    width: 70%;
+    resize: none;
+    background-color: #f9f9f9;
+    /* font-family: "Roboto", sans-serif;
+      font-size: 1.3vw; */
+    /* border: 0.05em solid black; */
+  }
+
+  .text-area:focus {
+    border: 0.15em solid black;
+    border-radius: 0.2em;
+  }
 }

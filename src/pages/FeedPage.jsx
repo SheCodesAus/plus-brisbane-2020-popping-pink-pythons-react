@@ -34,14 +34,9 @@ function FeedPage() {
     return (
         <div>
             <Header />
+            
             <div className="header-container">
-                <div className="img-laptop">
-                    <img src={feedHeader} />
-                </div>
-                <div className="img-mobile">
-                    <img src={feedHeaderMobile} />
-                </div>
-                <div className="search-container">
+            <div className="search-container">
                     <input 
                         type="text"
                         placeholder="Search..."
@@ -49,6 +44,13 @@ function FeedPage() {
                         onChange={(e) => setQ(e.target.value)}
                     />
                 </div>
+                <div className="img-laptop">
+                    {/* <img src={feedHeader} /> */}
+                    <h1>Feed | Latest Updates</h1>
+                </div>
+                {/* <div className="img-mobile">
+                    <img src={feedHeaderMobile} />
+                </div> */}
             </div>
             <div className="feed-page">            
                 <div id="opportunity-list">

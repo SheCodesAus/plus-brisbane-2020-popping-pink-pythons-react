@@ -1,5 +1,13 @@
-.header-container{
+/* .header-container{
     margin-left:10px;
+} */
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-right: 130px;
+    margin-top: 40px;
 }
 
 .header-container img{
@@ -11,6 +19,16 @@
     font-size: 30px;
     padding: 0;
     color: #5a3b5d;
+}
+.feed-page{
+    margin-top: 70px;
+}
+.search-container input{
+        height: 35px;
+        width: 400px;
+        font-size: 25px;
+        font-family:'satisfy';
+        padding:5px;
 }
 
 #opportunity-list {
@@ -54,6 +72,9 @@
     top: 29%;
     left: 23%;
     transform: translate(-50%, -50%);
+    /* display: flex;
+    flex-wrap: wrap;
+    align-self: flex-end; */
 }
 
 .search-container input{
@@ -62,6 +83,12 @@
     font-size: 30px;
     font-family:'satisfy';
     padding:5px;
+}
+.img-laptop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: 150px;
 }
 
 @media (min-width: 375px) {
@@ -81,7 +108,10 @@
     }
 
     .img-laptop{
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-left: 150px;
     }
 
 }
@@ -95,7 +125,10 @@
     }
 
     .img-laptop{
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-left: 150px;
     }
 }
 
@@ -124,19 +157,22 @@
       }
     
     .img-laptop{
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-left: 150px;
     }
 
     .img-mobile{
         display: none;
     }
     
-    .search-container {
+     .search-container {
         display: unset;    
         position: absolute;
-        top: 26%;
+        top: 180px;
         left: 32%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); 
     }
     
     .search-container input{
@@ -177,14 +213,11 @@
         margin-bottom:10px;
       }
     
-    .header-container img{
-        width:100%;
-        position: relative;
-    }
+   
 
     .search-container {
         position: absolute;
-        top: 29%;
+        top: 195px;
         left: 30%;
         transform: translate(-50%, -50%);
     }
@@ -203,11 +236,18 @@
             width: 600px;
         }
     
+        .search-container{
+            top:200px;
+        }
     }
 
     @media (min-width: 1400px){    
         .search-container input{
             width: 700px;
+        }
+
+        .search-container{
+            top:210px;
         }
     
     }
@@ -217,4 +257,7 @@
             width: 800px;
         }
     
+        .search-container{
+            top:220px;
+        }
     }

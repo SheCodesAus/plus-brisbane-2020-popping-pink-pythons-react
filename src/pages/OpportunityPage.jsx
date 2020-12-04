@@ -38,6 +38,7 @@ function OpportunityPage() {
             <Header />
             <h1 id="title">{opportunityData.title}</h1>
             <div className="opportunityPage">
+                    
                     <div className="column-1">
                         <img src={opportunityData.image} />
                         <div id="oppDetails">
@@ -47,7 +48,7 @@ function OpportunityPage() {
                             <p>{opportunityData.opp_type} amount: {opportunityData.amount}</p>
                         </div>
                         <div id="actions">
-                            <div><a href={opportunityData.opp_link}><u>Apply Here</u></a></div>
+                            <div><button className="button-opp"><a href={opportunityData.opp_link}><u>Apply Here</u></a></button></div>
                             <div><button className="button-opp" type="submit" onClick={postFavouriteData}>Add to  Favourites</button></div>
                         </div>
                     </div>
