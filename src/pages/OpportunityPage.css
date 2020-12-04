@@ -3,12 +3,15 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.opportunityPage {
-  display: flex;
-  align-content: space-around;
-  width: 80%;
-  margin-bottom: 40px;
-  padding-bottom: 40px;
+
+.opportunityPage{
+    display:flex;
+    align-content: space-around;
+    width: 90%;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+
+
 }
 .column-1 {
   display: flex;
@@ -25,24 +28,24 @@
   margin-top: 40px;
   width: 50%;
 }
-/* #objectives{
-    display: flex;
-    background-color: #FEDC2A;
+
+#objectives{
+    background-color: #fedc2a;
+    box-shadow: 0px 0px 5px -5px #c3a3c9;
     padding: 30px;
     width: auto;
-    margin-top: 30px; */
-/* } */
-/* #objectives-text {
-  display: flex;
-  align-self: center;
-  padding: 30px;
-  background-color: whitesmoke;
-  width: auto;
-  margin-top: 20px;
-} */
-#oppDetails {
-  background-color: #c3a3c9;
-  padding: 40px;
+    margin-top: 30px;
+}
+#objectives-text{
+    padding: 30px;
+    background-color: whitesmoke;
+    width: auto;
+    margin-top: 20px;
+}
+#oppDetails{
+    background-color:  #c3a3c9;
+    box-shadow: 0px 0px 5px #c3a3c9;
+    padding: 40px;
 }
 
 #location-map {
@@ -66,30 +69,23 @@
   padding-bottom: 20px;
 }
 
-#actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: #fedc2a;
-  padding: 10px 20px 10px 20px;
+
+#actions{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    background-color: #fedc2a;
+    box-shadow: 0px 0px 5px -5px #c3a3c9;
+    padding: 10px 20px 10px 20px;
 }
 
-.button-opp {
-  width: 80%;
-  height: 50px;
-  background-color: white;
-  color: grey;
-  border: 1px solid grey;
-  box-shadow: 0px 0px 5px grey;
-  margin-left: 50px;
-}
-.column-1 img {
-  width: auto;
-  height: 300px;
-  object-fit: contain;
-  border: 1px solid black;
-  box-shadow: 0px 0px 5px gray;
-  background-color: white;
-  padding: 40px;
-  margin-top: 30px;
+.button-opp{
+    width: 80%;
+    height: 50px;
+    background-color: white;
+    color: grey;
+    border: 1px solid grey;
+    box-shadow: 0px 0px 5px grey;
+    margin-left: 30px;
+
 }
