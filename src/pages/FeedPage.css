@@ -134,7 +134,7 @@
     .search-container {
         display: unset;    
         position: absolute;
-        top: 26%;
+        top: 180px;
         left: 32%;
         transform: translate(-50%, -50%);
     }
@@ -184,7 +184,7 @@
 
     .search-container {
         position: absolute;
-        top: 29%;
+        top: 195px;
         left: 30%;
         transform: translate(-50%, -50%);
     }
@@ -203,11 +203,18 @@
             width: 600px;
         }
     
+        .search-container{
+            top:200px;
+        }
     }
 
     @media (min-width: 1400px){    
         .search-container input{
             width: 700px;
+        }
+
+        .search-container{
+            top:210px;
         }
     
     }
@@ -217,4 +224,7 @@
             width: 800px;
         }
     
+        .search-container{
+            top:220px;
+        }
     }
