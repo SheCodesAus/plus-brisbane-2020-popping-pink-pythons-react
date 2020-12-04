@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     flex-direction: row;
+    margin-right: 100px;
 }
 
 .header-container img{
@@ -81,6 +82,7 @@
     justify-content: flex-end;
     margin-top: 50px;
     margin-right: 150px;
+    margin-left: 50px;
 }
 
 @media (min-width: 375px) {
@@ -212,10 +214,10 @@
    
 
     .search-container {
-        position: absolute;
+        /* position: absolute;
         top: 195px;
         left: 30%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); */
     }
     
     .search-container input{
