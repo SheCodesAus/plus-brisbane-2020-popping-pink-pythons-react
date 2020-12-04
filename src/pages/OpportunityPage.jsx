@@ -53,8 +53,8 @@ function OpportunityPage() {
                         </div>
                     </div>
                     <div className="column-2">
-                        <div id="objectives"><h2>Opportunity Objectives</h2></div>
-                        <div id="objectives-text"><p>{opportunityData.objectives}</p></div>
+                        <div id="objectives-opp"><h2>Opportunity Objectives</h2></div>
+                        <div id="objectives-opp-text"><p>{opportunityData.objectives}</p></div>
                         <div id="location-map"><h3>Location: {opportunityData.location}</h3><img src={`https://maps.googleapis.com/maps/api/staticmap?center=${opportunityData.location}&zoom=13&size=600x300&maptype=roadmap&markers=color:purple%7C${opportunityData.location}&key=AIzaSyCNap1Ggt6008bL_GDv0D2lDJ-gMyJfr9U`} /></div>
                     </div>                             
             </div>
