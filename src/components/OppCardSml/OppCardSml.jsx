@@ -15,7 +15,7 @@ function OppCardSml(props) {
     }
 
     const handleClick = () => {
-        console.log(opportunityData.id)
+        // console.log(opportunityData.id)
         changeId();
         toggle();
     }

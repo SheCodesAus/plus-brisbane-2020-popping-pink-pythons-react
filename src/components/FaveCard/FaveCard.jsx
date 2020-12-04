@@ -18,7 +18,7 @@ function FaveCard(props) {
     }
 
     const handleClick = () => {
-        console.log(favouritesData.id)
+        // console.log(favouritesData.id)
         changeId();
         toggle();
     }
