@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import convertDateTime from "../components/helpers/DateConverter";
 import "./UserPage.css"
 import Header from "../components/Header/Header";
 
 function UserPage() {
     const [userData, setUserData] = useState( [] );
-    const { username } = useParams();
     const [noUser, setNoUser] = useState(false)
 
-    let token = window.localStorage.getItem("token");
-
-   
+ 
     useEffect(() => {
-        const headers = token ? {
-            Authorization: `Token ${token}`,
-        } : {}
-        fetch(`${process.env.REACT_APP_API_URL}/users/${username}`, {
-            headers
-         })
-        .then((data) => {
+        let token = window.localStorage.getItem("token");
+        fetch(`${process.env.REACT_APP_API_URL}/users/currentuser`,{
+            method: "get",
+            headers: {
+            'Authorization': `Token ${token}`
+        }})
+        .then((results) => {
+            return results.json();
+        }).then((data) => {
             setUserData(data);
+            // console.log(data)
         });
-    }, [username]);
+    }, []);
+
 
     if (noUser === true) {
         return (
@@ -33,27 +33,71 @@ function UserPage() {
         )
     } else {
         return (
-            <div className="outer-container">
+            <div>
                 <Header />
-                <h1>{userData.username}</h1>
-
-                <div className="profile-container">
-                    <div className="img-container">
-                        <img alt="" className="profile-img" src={userData.image} />
-                    </div>
                     <div>
-                        <h3>Member since {convertDateTime(userData.date_created,0)}</h3>
-                        <h3>{userData.num_fav}</h3>
-                        
+                        <div className="grid-container">
+                            <div className="profile-grid-1">
+                                <h1>Profile</h1>
+                            </div>
+                            <div className="profile-grid-2">
+                                <img alt="" className="profile-img" src={userData.image} />
+                            </div>
+                            <div className="profile-grid-3"> 
+                                <div className="inner-3">
+                                    <h2>{userData.username}</h2>
+                                </div>
+                                <div className="inner-3">
+                                <h2>Joined on {convertDateTime(userData.date_created,0)}</h2>
+                                </div>
+                            </div>
+                            <div className="profile-grid-4">
+                                <div className="inner-4">
+                                    <h1>1{userData.num_fav}</h1>
+                                    <h3>favourite</h3>
+                                </div>
+                                <div className="inner-4">
+                                    <h1>125</h1>
+                                    <h3>interests</h3>
+                                </div>
+                                <div className="inner-4">
+                                    <h1>4</h1>
+                                    <h3>connections</h3>
+                                </div>
+                            </div>
+                            <div className="profile-grid-5">
+                                <div className="inner-5">
+                                    <h2>Bio</h2>
+                                    <p>{userData.bio}</p>
+                                </div>
+                            </div>
+                            <div className="profile-grid-6">
+                                <h1>Favourites</h1>
+                            </div>
+                            <div className="profile-grid-7">
+                                <div className="inner-fave">
+                                    <p>Favourite #1 - data to be pulled through as card</p>
+                                </div>
+                            </div>
+                            <div className="profile-grid-8">
+                                <div className="inner-fave">
+                                    <p>Favourite #2 - data to be pulled through as card</p>
+                                </div>
+                            </div>
+                            <div className="profile-grid-9">
+                                <div className="inner-fave">
+                                <   p>Favourite #3 - data to be pulled through as card</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="bio-container">
-                        <h3>Bio</h3>
-                        <p>{userData.bio}</p>
-                    </div>
-               </div> 
-            </div>
+            </div>            
         );
     }
 }
 
+
+                        {/* <div className="favourites-container">
+                            <p>this is where th faves go!</p>
+                        </div> */}
 export default UserPage;
