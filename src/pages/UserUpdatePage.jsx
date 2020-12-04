@@ -6,7 +6,7 @@ function UserUpdatePage() {
     return (
         <div>
             <Header />
-            <h1>User Update Page</h1>
+            <h1>Coming Soon!</h1>
         </div>
     );
 }

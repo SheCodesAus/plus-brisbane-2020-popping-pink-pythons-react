@@ -36,7 +36,6 @@ function UserPage() {
         return (
             <div>
                 <Header />
-
                 <div className="grid-container">
                     <div className="grid-header">
                     </div>
@@ -65,8 +64,8 @@ function UserPage() {
                                         <h3>favourites</h3>
                                     </div>
                                     <div className="grid i">
-                                        <h1>125</h1>
-                                        <h3>interests</h3>
+                                        <h1>10</h1>
+                                        <h3>applications in progress</h3>
                                     </div>
                                     <div className="grid j">
                                         <h1>4</h1>
@@ -89,7 +88,7 @@ function UserPage() {
                     <div className="favourites-container">
                             <div className="grid-favourites">
                                 <div className="grid o">
-                                    <h1>Favourites</h1>
+                                    <h1>Recent Favourites</h1>
                                 </div>
                                 <div className="grid p">
                                     {userData.favourites.map((favouritesData, key) => {
