@@ -1,5 +1,11 @@
-.header-container{
+/* .header-container{
     margin-left:10px;
+} */
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-direction: row;
 }
 
 .header-container img{
@@ -11,6 +17,9 @@
     font-size: 30px;
     padding: 0;
     color: #5a3b5d;
+}
+.feed-page{
+    margin-top: 70px;
 }
 
 #opportunity-list {
@@ -50,10 +59,13 @@
 }
 
 .search-container {
-    position: absolute;
+    /* position: absolute;
     top: 29%;
     left: 23%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-end;
 }
 
 .search-container input{
@@ -63,6 +75,13 @@
     font-family:'satisfy';
     padding:5px;
 }
+.img-laptop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 50px;
+    margin-right: 150px;
+}
 
 @media (min-width: 375px) {
 
@@ -71,7 +90,7 @@
     }
 
     .search-container{
-        display: none;
+        /* display: none; */
     }
 
     #opportunity-list {
@@ -81,7 +100,12 @@
     }
 
     .img-laptop{
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-top: 50px;
+        margin-right: 150px;
+        margin-right: 150px;
     }
 
 }
@@ -95,7 +119,11 @@
     }
 
     .img-laptop{
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-top: 50px;
+        margin-right: 150px;
     }
 }
 
@@ -124,7 +152,11 @@
       }
     
     .img-laptop{
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-top: 50px;
+        margin-right: 150px;
     }
 
     .img-mobile{
@@ -132,11 +164,11 @@
     }
     
     .search-container {
-        display: unset;    
+        /* display: unset;    
         position: absolute;
         top: 180px;
         left: 32%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); */
     }
     
     .search-container input{
@@ -177,10 +209,7 @@
         margin-bottom:10px;
       }
     
-    .header-container img{
-        width:100%;
-        position: relative;
-    }
+   
 
     .search-container {
         position: absolute;
@@ -204,7 +233,7 @@
         }
     
         .search-container{
-            top:200px;
+            /* top:200px; */
         }
     }
 
@@ -214,7 +243,7 @@
         }
 
         .search-container{
-            top:210px;
+            /* top:210px; */
         }
     
     }
@@ -225,6 +254,6 @@
         }
     
         .search-container{
-            top:220px;
+            /* top:220px; */
         }
     }

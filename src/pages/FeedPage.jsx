@@ -36,11 +36,12 @@ function FeedPage() {
             <Header />
             <div className="header-container">
                 <div className="img-laptop">
-                    <img src={feedHeader} />
+                    {/* <img src={feedHeader} /> */}
+                    <h1>Latest Updates</h1>
                 </div>
-                <div className="img-mobile">
+                {/* <div className="img-mobile">
                     <img src={feedHeaderMobile} />
-                </div>
+                </div> */}
                 <div className="search-container">
                     <input 
                         type="text"
