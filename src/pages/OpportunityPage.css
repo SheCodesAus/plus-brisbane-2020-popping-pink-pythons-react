@@ -41,7 +41,7 @@
   width: 50%;
 }
 
-#objectives{
+#objectives-opp{
     margin-top: 40px;
     padding: 25px;
     background-color: #fedc2a;
@@ -53,7 +53,7 @@
     background: linear-gradient(to top right, #feee9a 0%, #fedc2a 100%);
 }
 
-#objectives-text{
+#objectives-opp-tex{
     padding: 30px;
 }
 
