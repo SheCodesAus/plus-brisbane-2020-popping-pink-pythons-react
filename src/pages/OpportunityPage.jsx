@@ -34,34 +34,30 @@ function OpportunityPage() {
         return response.json();};
 
     return (
-        <div>
+        <div className="container">
             <Header />
-
-            <div className="container">
-
-            <div><h1 className="title">{opportunityData.title}</h1></div>
-                <div className="opportunityPage">
+            <h1 id="title">{opportunityData.title}</h1>
+            <div className="opportunityPage">
                     <div className="column-1">
                         <img src={opportunityData.image} />
-                        <div id="oppDetails"><p>Created: {convertDateTime(opportunityData.date_created,0)}</p>
-                            <p>Location: {opportunityData.location}</p>
-                            <p>Organisation: {opportunityData.organisation}</p>
+                        <div id="oppDetails">
+                            <p>Created: {convertDateTime(opportunityData.date_created,0)}</p>
+                            <h3>Organisation: {opportunityData.organisation}</h3>
                             <h3>Details</h3><p>{opportunityData.description}</p>
-                            <p>{opportunityData.opp_type} amount: {opportunityData.amount}</p></div>
+                            <p>{opportunityData.opp_type} amount: {opportunityData.amount}</p>
+                        </div>
                         <div id="actions">
-                            <div><a href={opportunityData.opp_link}>Link to Apply</a></div>
+                            <div><a href={opportunityData.opp_link}><u>Apply Here</u></a></div>
                             <div><button className="button-opp" type="submit" onClick={postFavouriteData}>Add to  Favourites</button></div>
                         </div>
                     </div>
-                    
                     <div className="column-2">
-                        <div id="objectives"><h2>Opportunity Objectives:</h2></div>
+                        <div id="objectives"><h2>Opportunity Objectives</h2></div>
                         <div id="objectives-text"><p>{opportunityData.objectives}</p></div>
-                        <div id="location-map"><img src={`https://maps.googleapis.com/maps/api/staticmap?center=${opportunityData.location}&zoom=13&size=600x300&maptype=roadmap&markers=color:purple%7C${opportunityData.location}&key=AIzaSyCNap1Ggt6008bL_GDv0D2lDJ-gMyJfr9U`} /></div>
+                        <div id="location-map"><h3>Location: {opportunityData.location}</h3><img src={`https://maps.googleapis.com/maps/api/staticmap?center=${opportunityData.location}&zoom=13&size=600x300&maptype=roadmap&markers=color:purple%7C${opportunityData.location}&key=AIzaSyCNap1Ggt6008bL_GDv0D2lDJ-gMyJfr9U`} /></div>
                     </div>                             
-                </div>
-            </div>    
-        </div>
+            </div>
+    </div> 
     );
 }
 export default OpportunityPage;
