@@ -6,7 +6,8 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     flex-direction: row;
-    margin-right: 100px;
+    margin-right: 130px;
+    margin-top: 40px;
 }
 
 .header-container img{
@@ -21,6 +22,13 @@
 }
 .feed-page{
     margin-top: 70px;
+}
+.search-container input{
+        height: 35px;
+        width: 400px;
+        font-size: 25px;
+        font-family:'satisfy';
+        padding:5px;
 }
 
 #opportunity-list {
@@ -60,13 +68,13 @@
 }
 
 .search-container {
-    /* position: absolute;
+    position: absolute;
     top: 29%;
     left: 23%;
-    transform: translate(-50%, -50%); */
-    display: flex;
+    transform: translate(-50%, -50%);
+    /* display: flex;
     flex-wrap: wrap;
-    align-self: flex-end;
+    align-self: flex-end; */
 }
 
 .search-container input{
@@ -80,9 +88,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    margin-top: 50px;
-    margin-right: 150px;
-    margin-left: 50px;
+    margin-left: 150px;
 }
 
 @media (min-width: 375px) {
@@ -92,7 +98,7 @@
     }
 
     .search-container{
-        /* display: none; */
+        display: none;
     }
 
     #opportunity-list {
@@ -105,9 +111,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
-        margin-top: 50px;
-        margin-right: 150px;
-        margin-right: 150px;
+        margin-left: 150px;
     }
 
 }
@@ -124,8 +128,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
-        margin-top: 50px;
-        margin-right: 150px;
+        margin-left: 150px;
     }
 }
 
@@ -157,20 +160,19 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
-        margin-top: 50px;
-        margin-right: 150px;
+        margin-left: 150px;
     }
 
     .img-mobile{
         display: none;
     }
     
-    .search-container {
-        /* display: unset;    
+     .search-container {
+        display: unset;    
         position: absolute;
         top: 180px;
         left: 32%;
-        transform: translate(-50%, -50%); */
+        transform: translate(-50%, -50%); 
     }
     
     .search-container input{
@@ -214,10 +216,10 @@
    
 
     .search-container {
-        /* position: absolute;
+        position: absolute;
         top: 195px;
         left: 30%;
-        transform: translate(-50%, -50%); */
+        transform: translate(-50%, -50%);
     }
     
     .search-container input{
@@ -235,7 +237,7 @@
         }
     
         .search-container{
-            /* top:200px; */
+            top:200px;
         }
     }
 
@@ -245,7 +247,7 @@
         }
 
         .search-container{
-            /* top:210px; */
+            top:210px;
         }
     
     }
@@ -256,6 +258,6 @@
         }
     
         .search-container{
-            /* top:220px; */
+            top:220px;
         }
     }

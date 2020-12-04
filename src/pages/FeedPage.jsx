@@ -34,6 +34,7 @@ function FeedPage() {
     return (
         <div>
             <Header />
+            
             <div className="header-container">
             <div className="search-container">
                     <input 
@@ -45,7 +46,7 @@ function FeedPage() {
                 </div>
                 <div className="img-laptop">
                     {/* <img src={feedHeader} /> */}
-                    <h1>Latest Updates</h1>
+                    <h1>Feed | Latest Updates</h1>
                 </div>
                 {/* <div className="img-mobile">
                     <img src={feedHeaderMobile} />
