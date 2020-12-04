@@ -132,12 +132,12 @@ function NewOpportunityForm() {
 
   return (
     <div className="submit-opportunity-form">
-      <TitleText title="Create an Opportunity" />
+      <TitleText title="List an opportunity" />
       <TextInput
         id="title"
         type="text"
         label="Opportunity Title"
-        placeholder="Give your Opportunity a welcoming name!"
+        placeholder="Give your opportunity a welcoming name!"
         onChange={handleChange}
         error={errorMessages.title}
       />
@@ -160,8 +160,16 @@ function NewOpportunityForm() {
       <TextArea
         id="description"
         type="text"
-        label="Opportunity Summary"
-        placeholder="Tell us what this Opportunity is all about"
+        label="Opportunity Description"
+        placeholder="Tell us what this opportunity is all about"
+        error={errorMessages.description}
+        onChange={handleChange}
+      />
+      <TextInput
+        id="Objectives"
+        type="text"
+        label="Opportunity Objectives"
+        placeholder="What are the key objectives of this opportunity"
         error={errorMessages.description}
         onChange={handleChange}
       />
@@ -177,7 +185,39 @@ function NewOpportunityForm() {
         id="image"
         type="url"
         label="Image URL"
-        placeholder="Enter a URL to your most eye catching photo"
+        placeholder="Enter a URL to an image"
+        onChange={handleChange}
+        error={errorMessages.image}
+      />
+      <TextInput
+        id="start_date"
+        type="date"
+        label="Start_Date"
+        placeholder="When is the starting date?"
+        onChange={handleChange}
+        error={errorMessages.image}
+      />
+      <TextInput
+        id="close_date"
+        type="date"
+        label="Close_Date"
+        placeholder="When is the closing date?"
+        onChange={handleChange}
+        error={errorMessages.image}
+      />
+      <TextInput
+        id="opp_type"
+        type="text"
+        label="Opportunity Type"
+        placeholder="What type of opportunity is this?"
+        onChange={handleChange}
+        error={errorMessages.image}
+      />
+      <TextInput
+        id="opp_link"
+        type="url"
+        label="Opportunity Link"
+        placeholder="Provide a link to this opportunity"
         onChange={handleChange}
         error={errorMessages.image}
       />
