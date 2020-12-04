@@ -41,6 +41,22 @@
   width: 50%;
 }
 
+#objectives{
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #fedc2a;
+    box-shadow: 0px 0px 5px -5px #c3a3c9;
+    box-shadow: 3px 2px 15px -6px gray;
+    background: -webkit-linear-gradient(bottom left, #feee9a 0%, #fedc2a 100%);
+    background: -moz-linear-gradient(bottom left, #feee9a 0%, #fedc2a 100%);
+    background: -o-linear-gradient(bottom left, #feee9a 0%, #fedc2a 100%);
+    background: linear-gradient(to top right, #feee9a 0%, #fedc2a 100%);
+}
+
+#objectives-text{
+    padding: 30px;
+}
+
 #oppDetails {
   background-color: #c3a3c9;
   box-shadow: 0px 0px 5px #c3a3c9;
